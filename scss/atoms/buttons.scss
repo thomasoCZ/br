@@ -1,0 +1,44 @@
+.button, input[type=submit], input[type=button]  {
+	display: inline-block;
+	background-color: $color1;
+	padding: 16px 40px;
+	margin: 0;
+	border: 1px solid transparent;
+	text-transform: uppercase;
+	font-family: $font-heading;
+	font-weight: 500;
+	color: #fff;
+	font-size: 16px;
+	min-width: 220px;
+	text-align: center;	
+	letter-spacing: 1px;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	outline: 0;
+	appearance: none;
+	cursor: pointer;
+
+	&:hover, &:focus {
+
+	}
+
+	&:focus {
+
+	}
+
+	&:active {
+
+	}
+
+	&--outline {
+		border-color: $color1;
+		background-color: none;
+	}
+
+}
+
+.button--outline {
+	border-color: #fff;
+	background-color: transparent;
+}

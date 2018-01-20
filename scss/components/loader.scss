@@ -1,0 +1,55 @@
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    
+    display: none;
+    
+    &__logo {  
+        position: relative;
+        z-index: 9999;
+        text-align: center;
+        
+        &--back, &--front {
+            width: 12rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        &--back {
+            fill: #f2f2f2;
+        }
+
+        &--front {
+            fill: $color2;
+            //clip-path: polygon(0 0, 32% 0, 32% 100%, 0% 100%);
+        }
+        
+    }
+
+    &__title {
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        letter-spacing: 0.33rem;
+        margin-right: -0.33rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: $font-heading;
+        overflow: hidden;
+
+        display: none;
+    }
+}

@@ -1,0 +1,44 @@
+.language-menu {
+    position: fixed;
+    top: 2.4rem;
+    right: 2.4rem;
+    z-index: 50;
+    @extend .heading-caps;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &:hover a {
+        transform: translateX(0);
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        line-height: 2;
+        font-weight: 500;
+        transition: color 0.8s, transform 0.2s cubic-bezier(0.47, 0.15, 0.18, 0.87);
+        color: rgba(#fff, 0.4);
+        transform: translateX(100%);
+
+        &:hover {
+            
+        }
+    }
+    a.active {
+        order: -1;
+        cursor: auto;
+        color: #fff;
+        transform: translateX(0);
+    }
+}
+
+.fp-viewing-contact {
+    .language-menu a {
+        color: rgba(#000, 0.4);
+
+        &.active {
+            color: #000;
+        }
+    }
+}

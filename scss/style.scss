@@ -1,0 +1,16 @@
+//@import './jquery.fullpage.min.css';
+
+//atoms
+@import 'atoms/variables';
+@import 'atoms/mixins';
+@import 'atoms/typography';
+@import 'atoms/buttons';
+@import 'atoms/forms';
+@import 'atoms/global';
+
+//components
+@import 'components/language-menu';
+@import 'components/loader';
+@import 'components/section';
+@import 'components/color-block';
+@import 'components/business-form';

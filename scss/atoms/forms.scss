@@ -1,0 +1,43 @@
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+textarea {
+    width: 100%;
+    border: 0;
+    border: 1px solid rgba(#000,0.1);
+    padding: 15px;
+    background: none;
+    color: #000;
+    font-family: $font-base;
+    outline: 0;
+    transition: color 0.4s;
+    font-size: 1rem;
+
+    &::placeholder {
+        color: #ddd;
+        opacity: 1;
+        font-family: $font-base;
+    }
+    &:focus {
+        //border-color: rgba(#000, 1);
+    }
+    &:focus+label {
+        color: #000;
+    }
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 30px #000 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    border-bottom: 1px solid $color1;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
