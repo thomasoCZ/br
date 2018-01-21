@@ -1,15 +1,14 @@
 .button, input[type=submit], input[type=button]  {
 	display: inline-block;
 	background-color: $color1;
-	padding: 16px 40px;
+	padding: 1rem 3rem 0.9rem;
 	margin: 0;
 	border: 1px solid transparent;
 	text-transform: uppercase;
 	font-family: $font-heading;
 	font-weight: 500;
 	color: #fff;
-	font-size: 16px;
-	min-width: 220px;
+	font-size: 1rem;
 	text-align: center;	
 	letter-spacing: 1px;
 	position: relative;
