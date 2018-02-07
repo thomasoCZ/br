@@ -14,7 +14,6 @@
   visibility: hidden;
   pointer-events: none;
   transition: 0.5s;  
-  perspective: 1000px;
 }
 
 .section.active {
@@ -30,16 +29,13 @@
   top: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
   z-index: 0;
   background: $color2;
   transform-origin: 40% 40%;
-  transform: scale3D(0.6,0,3) rotate3d(1,1,1,1deg);
+  transform: scale3D(0.6,0,3) rotate3d(1,1,1,0deg);
   will-change: transform;
   transition: 0s ease-out 0.7s;
   //border-radius: 100%;
-  
-  
 
   &:after {
     content:'';
@@ -50,7 +46,7 @@
     height: 100%;
     will-change: transform;
     transform: scale3D(0.6,1,3) rotate3d(1,1,4,-15deg);
-    background-color: rgba(#000,0.05);
+    background-color: rgba(#000,0.1);
   }
 
 }
@@ -58,7 +54,7 @@
 .active .section__bg {
 	transform: scale3D(1.1,1.6,0.6) rotate3d(1.4,1.2,5,-35deg);
   transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0.2s;
-  backface-visibility: hidden;
+
   &:after {
     
   }
@@ -66,23 +62,16 @@
 
 .section--home {
   .section__bg {
-    background: radial-gradient(circle at 20% 75%, #1a262e, $color2, #000);
-    overflow: hidden;
-    left: 0;
-    transform-origin: 60% 50%;
-    transform: scale3D(1, 1.6, 0) rotate(-65deg) rotate3d(0, 6, 1, -20deg);
-
-    &:after {
-     background-color: rgba(#000,0.2);
-    }
+    transform-origin: 60% 100%;
+    transform: scale3D(0,0,3) rotate3d(1,2,3,-10deg);
   }
 }
 
 .section--home.active {
   .section__bg {
-    transform-origin: 60% 50%;
-    transform: scale3D(1, 1.3, 2) rotate(-22deg) rotate3d(0, 6, 1, -20deg);
-    transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0s;
+    transform-origin: 40% 40%;
+    transform: scale3D(1.4,2,0.4) rotate3d(1.4,1.2,5,-26deg);
+    transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0.2s;
   }
 }
 
@@ -132,50 +121,15 @@ sup {
   left: 45%;
   top: 50%;
   transform: translate3D(0, -50%, 0);
-  //display: none;
   &__title {
     font-size: 2.9rem;
-    overflow: hidden;
-    span {
-      display: block;
-      transform: translateY(100%);
-    }
   }
   &__text {
     font-size: 1.8rem;
     font-weight: 300;
     letter-spacing: 1px;
   }
-
-  .text-line {
-    display: block;
-    overflow: hidden;
-
-    span {
-      display: block;
-      transform: translateY(100%);
-    }
-  }
 }
-
-
-.active .content {
-
-  .content__title span {
-    transform: translateY(0);
-    transition: transform 2.6s cubic-bezier(0.63, 0.04, 0, 0.99) .3s;
-  }
-
-  .text-line span {
-    transform: translateY(0);
-    transition: transform 2.6s cubic-bezier(0.63, 0.04, 0, 0.99) .5s;
-  }
-
-  .text-line:nth-of-type(2) span{
-    transition-delay: .7s;
-  }
-}
-
 
 .section--ixion {
   .section__bg {
@@ -209,9 +163,7 @@ sup {
   height: 100%;
   position: relative;
   z-index: 10;
-  //transform-style: preserve-3d;
-  //display: none;
-  
+  transform-style: preserve-3d;
   .img-holder {
     max-width: 90vw;
     height: auto;
@@ -418,6 +370,24 @@ sup {
     fill: #fff;
     transform-origin: 50% 50%;
     transition: 1.2s linear;
+  }
+  @keyframes arrowIn {
+    0% {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+    49% {
+      opacity: 0;
+      transform: translate(20px, 0px);
+    }
+    51% {
+      opacity: 0;
+      transform: translate(-20px, 0px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
 }
 

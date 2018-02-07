@@ -21,33 +21,37 @@ jQuery(document).ready(function ($) {
   });
 
 
-  // animations
-
-  var homeBg = new TimelineMax({
-    paused: true
-      })
-      .to('.section__bg',2,{x: '50%'});
+  /*
+  TweenMax.set('.circle-top',{
+    drawSVG: 0,
+    transformOrigin:"50% 50%"});
 
 
+  $('.svg-arrow').hover(function(){
+  
+    TweenMax.to('.circle-top', 1.2,{
+      drawSVG:"0% 100%",
+      rotation: '180',
+      ease:new Ease(BezierEasing(0.73,0.38,0,1))});
 
-  $('#fullpage').fullpage({
+  },function(){
 
-    scrollingSpeed: 700,
-    menu: '.fullpage-menu',
-    // scrollOverflow:true,
-    // mouseWheelSpeed: 6
-/*
-    onLeave: function(index, nextIndex, direction){
-      if(index == 1 && direction =='down'){
-        homeBg.play();
-        console.log('Go')        
-      }
-    }
-*/  
-  });
+
+    TweenMax.to('.circle-top', 1.2,{
+      drawSVG:"0% 0%",
+      rotation: '0',
+
+      ease:new Ease(BezierEasing(0.73,0.38,0,1))});
+  }
+  
+
+
+  );
+
+  */
 
   // hp tilt effect
-
+  
   $('.work-screen').tilt({
     maxTilt:        6,
     perspective:    2000,   // Transform perspective, the lower the more extreme the tilt gets.
@@ -60,8 +64,18 @@ jQuery(document).ready(function ($) {
     glare:          false,  // Enables glare effect
     maxGlare:       1       // From 0 - 1.
   });
-
   
+
+
+  $('#fullpage').fullpage({
+    
+        scrollingSpeed: 700,
+        menu: '.fullpage-menu',
+        onLeave: function(index,nextIndex, direction) {
+          
+        }
+  });
+
 
 
   
