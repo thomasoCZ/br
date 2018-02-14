@@ -9,35 +9,65 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #fff;
-    
-    //display: none;
-    
-    &__logo {  
+    opacity: 1;
+    background-color: #fff; //display: none;
+    &__logo {
         position: relative;
         z-index: 9999;
-        text-align: center;
-        
-        &--back, &--front {
-            width: 12rem;
+        text-align: center; //animation-name: logopulse;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        opacity: 0;
+        transform: scale(2);
+        will-change: transform;
+        width: 12rem;
+        height: 4.8rem;
+        &.in {
+            opacity: 1;
+            transform: scale(1);
+            transition: 1s transform cubic-bezier(0.63, 0.04, 0, 0.99), opacity 0.4s;
+        }
+        &--back,
+        &--front {
             position: absolute;
             top: 0;
             left: 0;
-            transform: translate(-50%, -50%);
-            
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            svg {
+                width: 12rem;
+                height: 4.8rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
-
         &--back {
-            fill: #f2f2f2;
+            svg {
+                fill: #f2f2f2;
+            }
         }
-
         &--front {
-            fill: $color2;
-            //clip-path: polygon(0 0, 32% 0, 32% 100%, 0% 100%);
+            width: 0%;
+            animation: logofill 1.6s 1s cubic-bezier(0.71, 0.11, 0, 0.94);
+            animation-fill-mode: forwards;
+            @keyframes logofill {
+               
+                1% {
+                    width: 0;
+                }
+                100% {
+                    width: 100%;
+                }    
+            }
+            svg {
+                fill: $color2;
+            }
         }
-        
     }
-
     &__title {
         display: block;
         color: #f2f2f2;
@@ -49,7 +79,16 @@
         text-transform: uppercase;
         font-family: $font-heading;
         overflow: hidden;
-
         display: none;
+    }
+}
+
+.fp-init .loader {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+
+    .loader__logo {
+        //transform: scale(0.8);
     }
 }

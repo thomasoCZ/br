@@ -1,4 +1,8 @@
-jQuery(document).ready(function ($) {
+
+
+
+
+$(document).ready(function() {
 
   var mobile = window.matchMedia("(max-width: 767px)");
 
@@ -6,10 +10,32 @@ jQuery(document).ready(function ($) {
 
   }
 
+  var fpOptions = {
+    scrollingSpeed: 700,
+    menu: '.fullpage-menu',
+    onLeave: function(index,nextIndex, direction) {
+      
+    }
+  };
+
+  $('#fullpage').fullpage(fpOptions);
+  $('.section--home').removeClass('active');
+
+  $('.loader__logo').addClass('in');
+
+
+
   // business form trigger
 
   $('.bf-trigger').click(function(){
     $('.business-form').toggleClass('active');
+
+    if($('.business-form').hasClass('active')) { 
+      $.fn.fullpage.setAllowScrolling(false);
+    }
+    else {
+      $.fn.fullpage.setAllowScrolling(true);
+    }
   });
 
 
@@ -21,37 +47,8 @@ jQuery(document).ready(function ($) {
   });
 
 
-  /*
-  TweenMax.set('.circle-top',{
-    drawSVG: 0,
-    transformOrigin:"50% 50%"});
-
-
-  $('.svg-arrow').hover(function(){
-  
-    TweenMax.to('.circle-top', 1.2,{
-      drawSVG:"0% 100%",
-      rotation: '180',
-      ease:new Ease(BezierEasing(0.73,0.38,0,1))});
-
-  },function(){
-
-
-    TweenMax.to('.circle-top', 1.2,{
-      drawSVG:"0% 0%",
-      rotation: '0',
-
-      ease:new Ease(BezierEasing(0.73,0.38,0,1))});
-  }
-  
-
-
-  );
-
-  */
-
   // hp tilt effect
-  
+  /*
   $('.work-screen').tilt({
     maxTilt:        6,
     perspective:    2000,   // Transform perspective, the lower the more extreme the tilt gets.
@@ -66,18 +63,15 @@ jQuery(document).ready(function ($) {
   });
   
 
-
-  $('#fullpage').fullpage({
-    
-        scrollingSpeed: 700,
-        menu: '.fullpage-menu',
-        onLeave: function(index,nextIndex, direction) {
-          
-        }
-  });
+*/
 
 
+});
 
-  
 
+$(window).on('load', function () {
+  setTimeout(function(){
+    $('body').addClass('fp-init');
+    $('.section--home').addClass('active');
+  },2800);
 });

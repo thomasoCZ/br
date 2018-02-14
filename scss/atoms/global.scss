@@ -66,10 +66,16 @@ h6 {
 	height: 2.4rem;
 	top: 2.4rem;
 	left: 2rem;
+	opacity: 0;
 	z-index: 50;
 	svg path {
 		transition: 0.8s;
 	}
+}
+
+.fp-init .logo{
+	opacity: 1;
+	transition: 2s 1s;
 }
 
 .section {
