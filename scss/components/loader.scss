@@ -52,17 +52,22 @@
         }
         &--front {
             width: 0%;
-            animation: logofill 1.6s 1s cubic-bezier(0.71, 0.11, 0, 0.94);
-            animation-fill-mode: forwards;
-            @keyframes logofill {
-               
-                1% {
-                    width: 0;
+
+            &.animate {
+                animation: logofill 1.6s 0.8s cubic-bezier(0.71, 0.11, 0, 0.94);
+                animation-fill-mode: forwards;
+                @keyframes logofill {
+                   
+                    1% {
+                        width: 0;
+                    }
+                    100% {
+                        width: 100%;
+                    }    
                 }
-                100% {
-                    width: 100%;
-                }    
+
             }
+            
             svg {
                 fill: $color2;
             }

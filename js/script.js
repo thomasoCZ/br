@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function() {
 
   var mobile = window.matchMedia("(max-width: 767px)");
@@ -10,17 +6,12 @@ $(document).ready(function() {
 
   }
 
-  var fpOptions = {
+  $('#fullpage').fullpage({
     scrollingSpeed: 700,
-    menu: '.fullpage-menu',
-    onLeave: function(index,nextIndex, direction) {
-      
-    }
-  };
+    menu: '.fullpage-menu'
+  });
 
-  $('#fullpage').fullpage(fpOptions);
   $('.section--home').removeClass('active');
-
   $('.loader__logo').addClass('in');
 
 
@@ -70,6 +61,7 @@ $(document).ready(function() {
 
 
 $(window).on('load', function () {
+  $('.loader__logo--front').addClass('animate');
   setTimeout(function(){
     $('body').addClass('fp-init');
     $('.section--home').addClass('active');
