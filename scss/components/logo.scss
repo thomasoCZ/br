@@ -1,0 +1,19 @@
+.logo {
+	position: fixed;
+	width: 6rem;
+	height: 2.4rem;
+	top: 2.6rem;
+	left: 1.7rem;
+	opacity: 0;
+	z-index: 50;
+	svg path {
+    fill: #fff;
+    @media (min-width: $sm) {
+      fill: #f00;
+    }
+	}
+}
+
+.fp-init .logo{
+	opacity: 1;
+}

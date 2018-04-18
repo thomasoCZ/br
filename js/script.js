@@ -14,8 +14,6 @@ $(document).ready(function() {
   $('.section--home').removeClass('active');
   $('.loader__logo').addClass('in');
 
-
-
   // business form trigger
 
   $('.bf-trigger').click(function(){
