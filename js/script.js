@@ -7,12 +7,12 @@ $(document).ready(function() {
   }
 
   // desktop fullpage init
-/*
+
   $('#fullpage').fullpage({
     scrollingSpeed: 700,
     menu: '.fullpage-menu'
   });
-  */
+  
 
   // logo loader in 
 /*
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 
 });
-
+/*
 
 $(window).on('load', function () {
   $('.loader__logo--front').addClass('animate');
@@ -70,3 +70,5 @@ $(window).on('load', function () {
     $('.section--home').addClass('active');
   },2800);
 });
+
+*/
