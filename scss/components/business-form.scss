@@ -2,6 +2,20 @@
 	
 }
 
+.business-form__icon {
+  position: absolute;
+  top: 1.7rem;
+  right: 2rem;
+  z-index: 50;
+  width: 2.4rem;
+
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
+}
+
 .active .bf-trigger {
   
 }
