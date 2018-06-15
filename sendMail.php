@@ -7,6 +7,8 @@
  */
 
 header('Access-Control-Allow-Origin: *');
+
+
 $url = 'https://api.elasticemail.com/v2/email/send';
 try{
     $post = array('from' => 'radek@brivestudio.com',
@@ -35,18 +37,3 @@ try{
 catch(Exception $ex){
     echo $ex->getMessage();
 }
-
-
-
-
-/*
-class Emp {
-    public $name = "";
-    public $hobbies  = "";
-    public $birthdate = "";
-}
-$e = new Emp();
-$e->name = "sachin";
-$e->hobbies  = "sports";
-echo "test";
-*/
