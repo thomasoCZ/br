@@ -1,13 +1,5 @@
-.bf-trigger {
-	position: absolute;
-	top: 1.9rem;
-  right: 2rem;
-  z-index: 4;
-  
-  @media (max-width: $xs) {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-  }
+.business-form__button {
+	
 }
 
 .active .bf-trigger {
@@ -45,5 +37,17 @@
   &__close {
     display: inline-block;
     margin-bottom: 4rem;
+  }
+
+  &__button {
+    position: absolute;
+    top: 1.9rem;
+    right: 2rem;
+    z-index: 4;
+    
+    @media (max-width: $xs) {
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+    }
   }
 }

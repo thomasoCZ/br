@@ -6,14 +6,19 @@ $(document).ready(function() {
 
   }
 
+  // desktop fullpage init
+/*
   $('#fullpage').fullpage({
     scrollingSpeed: 700,
     menu: '.fullpage-menu'
   });
+  */
 
+  // logo loader in 
+/*
   $('.section--home').removeClass('active');
   $('.loader__logo').addClass('in');
-
+*/
   // business form trigger
 
   $('.bf-trigger').click(function(){
