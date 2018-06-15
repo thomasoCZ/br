@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class Form extends Component {
-
     render() {
         return (
             <div className="contact-form">
@@ -14,6 +13,7 @@ class Form extends Component {
                                    name="web"
                                    checked={this.props.state.web}
                                    onChange={this.props.handleInputChange}
+
                             />
                             Website development
                         </label>
@@ -63,44 +63,47 @@ class Form extends Component {
                             Other ?
                         </label>
                     </div>
-
-
                     <button  className="btn" onClick={this.props.nextStepChange}>
                         <span className="btn__text">Continue</span>
                     </button>
-
                     </div>
-
                     <div className={this.props.state.secondStep === true ? 'active' : ''}>
                         <label>
                             Full Name:
                             <input type="text"
                                    name="name"
                                    value={this.props.state.name}
-                                   onChange={this.props.handleInputChange} />
+                                   onChange={this.props.handleInputChange}
+                                   required="required"
+                            />
                         </label>
                         <div>
                         <label>Emal Address:</label>
-
                             <input type="text"
                                    name="address"
                                    value={this.props.state.address}
-                                   onChange={this.props.handleInputChange} />
-
+                                   onChange={this.props.handleInputChange}
+                                   required="required"
+                            />
                         </div>
                         <div>
-                            <label className="form-label">message</label>
+                            <label className="form-label">Message</label>
                             <textarea
                                 className="form-input"
                                 name="message"
                                 rows="5"
                                 value={this.props.state.message}
                                 onChange={this.props.handleInputChange}
-                                placeholder="" />
+                                placeholder=""
+                                required="required"
+                            />
                         </div>
                         <button type="submit" className="btn">
                             <span className="btn__text">Odeslat</span>
                         </button>
+                    </div>
+                    <div className={this.props.state.finalStep === true ? 'active' : ''}>
+                        <h3>Thank you for your message</h3>
                     </div>
                 </form>
             </div>
