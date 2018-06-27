@@ -4,9 +4,10 @@
 @import 'atoms/variables';
 @import 'atoms/mixins';
 @import 'atoms/typography';
+@import 'atoms/global';
 @import 'atoms/buttons';
 @import 'atoms/forms';
-@import 'atoms/global';
+
 
 //components
 @import 'components/logo';
@@ -16,3 +17,4 @@
 @import 'components/section-content';
 @import 'components/color-block';
 @import 'components/business-form';
+@import 'components/home-featured';

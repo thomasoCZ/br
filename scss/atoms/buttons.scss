@@ -1,18 +1,18 @@
 .button, input[type=submit], input[type=button]  {
 	display: inline-block;
 	background-color: $color1;
-	padding: 1rem 3rem 0.9rem;
+	padding: 0.8rem 2.3rem 0.7rem;
 	margin: 0;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	text-transform: uppercase;
 	font-family: $font-heading;
 	font-weight: 500;
 	color: #fff;
 	font-size: 1rem;
-	text-align: center;	
-	letter-spacing: 1px;
+	text-align: center;
 	position: relative;
 	overflow: hidden;
+	letter-spacing: 1px;
 	text-decoration: none;
 	outline: 0;
 	appearance: none;
@@ -33,13 +33,14 @@
 }
 
 .button--outline {
-	border-color: rgba(#fff,0.4);
+	border-color: $color1;
 	background-color: transparent;
 	transition: 0.6s;
+	color: #fff;
 	//mix-blend-mode: color-dodge;
 
 	&:hover {
-		border-color: rgba(#fff,1);
+		//border-color: rgba(#fff,1);
 		//box-shadow: 0 0 60px 0 rgba(#fff,0.4);
 	}
 }

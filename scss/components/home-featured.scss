@@ -1,0 +1,31 @@
+.home-featured {
+  position: absolute;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  transform: rotate(-90deg) translate(30%, 70%);
+
+  &__title {
+    @extend .heading-caps;
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(#fff,0.2);
+    
+  
+    &:after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+
+}

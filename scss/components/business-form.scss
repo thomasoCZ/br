@@ -4,13 +4,13 @@
 
 .business-form__icon {
   position: absolute;
-  top: 1.7rem;
-  right: 2rem;
+  top: 1.4rem;
+  right: 1.4rem;
   z-index: 50;
-  width: 2.4rem;
+  width: 2rem;
 
   svg {
-    path {
+    * {
       fill: #fff;
     }
   }
