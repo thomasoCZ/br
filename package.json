@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "dev-ip": "^1.0.1"
+  },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
+    "browser-sync": "^2.24.5",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",

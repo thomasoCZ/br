@@ -7,6 +7,8 @@ var cssnano = require('cssnano');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var browserSync = require('browser-sync');
+var devip = require('dev-ip');
 
 
 // add gulp-uncss to remove unused css code
@@ -38,6 +40,8 @@ gulp.task('sass', function() {
 
 });
 
+gulp.task('sass-watch',['sass'], browserSync.reload);
+
 
 gulp.task('scripts', function() {  
     return gulp.src('js/script.js')
@@ -46,10 +50,15 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('js'));
 });
 
-
 gulp.task('watch', function(){
-	gulp.watch(['scss/*.scss','scss/**/*.scss'], ['sass']);
-
+	browserSync({
+		//host: devip(),
+		host: '10.0.0.43',
+		server: {
+			baseDir: './'
+		}
+	}),
+	gulp.watch(['scss/*.scss','scss/**/*.scss'], ['sass-watch']);
 	//gulp.watch('js/script.js', ['scripts']);
 	
 });

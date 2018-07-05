@@ -1,0 +1,38 @@
+.section-bg {
+  background-color: #000;
+  position: absolute;
+  z-index: -1;
+
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+}
+
+.section--home .section-bg, .section--contact .section-bg {
+  background-image: linear-gradient(to top, #12151f, #000000);
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    mix-blend-mode: overlay;
+    -ms-transform: rotate(15deg) scale(3);
+    transform: rotate(-45deg) scale(1.5) translateX(-50%);
+  }
+}
+
+
+.section--dumbbell .section-bg {
+  background: #ff3700;
+  height: 50%;
+}
+.section--ixion .section-bg {
+  background: #1f82e6;
+  height: 50%;
+}

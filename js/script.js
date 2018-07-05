@@ -6,6 +6,8 @@ $(document).ready(function() {
 
   }
 
+
+
   // desktop fullpage init
 
   $('#fullpage').fullpage({
@@ -72,3 +74,40 @@ $(window).on('load', function () {
 });
 
 */
+
+function homeIn() {
+
+  // split lines
+  
+    $('.home-split').splitLines({
+      tag: '<div class="split-line"><span>',
+      width: 'calc(100% - 2.8rem)',
+      keepHtml: true
+    });
+  
+    $('.split-line').each(function(i){
+      
+        var $item = $(this).find('span');
+    
+        setTimeout(function(){
+          $item.addClass('in');
+        }, 200*i);
+    });
+  
+    // home featured in
+  
+    setTimeout(function(){
+      $('.home-featured').addClass('in');
+    }, 500);
+  
+  
+  }
+
+
+
+
+$(window).on('load',function(){
+    
+  homeIn();
+   
+});
