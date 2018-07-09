@@ -17,10 +17,10 @@ $(document).ready(function() {
   
 
   // logo loader in 
-/*
+
   $('.section--home').removeClass('active');
   $('.loader__logo').addClass('in');
-*/
+
   // business form trigger
 
   $('.bf-trigger').click(function(){
@@ -63,25 +63,15 @@ $(document).ready(function() {
 
 
 });
-/*
-
-$(window).on('load', function () {
-  $('.loader__logo--front').addClass('animate');
-  setTimeout(function(){
-    $('body').addClass('fp-init');
-    $('.section--home').addClass('active');
-  },2800);
-});
-
-*/
 
 function homeIn() {
 
   // split lines
   
-    $('.home-split').splitLines({
+    $('.split-text').splitLines({
       tag: '<div class="split-line"><span>',
       width: 'calc(100% - 2.8rem)',
+      //width: '100%',
       keepHtml: true
     });
   
@@ -107,7 +97,18 @@ function homeIn() {
 
 
 $(window).on('load',function(){
+
+  
+
+  $('.loader__logo--front').addClass('animate');
+  setTimeout(function(){
+    $('body').addClass('fp-init');
+    $('.section--home').addClass('active');
+    homeIn();
+  },2800);
+
+  
     
-  homeIn();
+ 
    
 });

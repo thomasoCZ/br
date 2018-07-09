@@ -1,8 +1,12 @@
 .section-mockup {
- 
-    position: relative;
-    left: 0;
-    top: 5%;
-    width: 160%;
-    max-width: 80vh;
+    position: relative; 
+    img {
+        height: auto;
+        position: absolute;
+        max-width: 70vh;
+        top: 5vh;
+        right: -10vh;
+    }
+    
+
 }

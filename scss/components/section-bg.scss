@@ -1,5 +1,5 @@
 .section-bg {
-  background-color: #000;
+  background-color: #12151f;
   position: absolute;
   z-index: -1;
 
@@ -29,6 +29,7 @@
 
 
 .section--dumbbell .section-bg {
+  transform: scale(1.4) rotate(15deg) translateY(-24%);
   background: #ff3700;
   height: 50%;
 }

@@ -2,11 +2,11 @@
 	
 }
 
-.business-form__icon {
+.business-form__icon, .business-form__close {
   position: absolute;
   top: 1.4rem;
   right: 1.4rem;
-  z-index: 50;
+  z-index: 40;
   width: 2rem;
 
   svg {
@@ -27,7 +27,10 @@
   bottom: 0;
   right: 0;
   z-index: 50;
-  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fff;
   background: rgba(#000,0.95);
   opacity: 0;
@@ -41,6 +44,10 @@
     visibility: visible;
     //transform: scale(1) ;
     
+  }
+
+  &__close {
+
   }
 
   &__inner {
