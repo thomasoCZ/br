@@ -1,19 +1,21 @@
 .section-content {
-  padding: 1.4rem;
-}
-
-.section--home .section-content {
+  
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  
+  padding: 1.2rem;
 
-  &__inner {
-    text-align: left;
+
+  @media (min-width: $md) {
+    padding: 3rem;
+    width: 50%;
+    left: 50%;
   }
+}
+
+.section--home .section-content {
 
   &__title {
     font-size: 1.2rem;
@@ -30,17 +32,19 @@
     display: none;
     margin-top: 1.6rem;
   }
+
+
+
 }
 
 .section--contact .section-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 
+  justify-content: center;
+
+  &__inner {
+    text-align: center;
+  }
+  
   &__title {
     color: #fff;
     font-size: 2rem;
@@ -77,14 +81,22 @@
 
 .section--work .section-content{
 
-  position: absolute;
+ 
   top: 50%;
   left: 0;
-  height:50%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 50%;
+
+  @media (min-width: $md) {
+    left: 50%;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &__title {
     color: #000;

@@ -13,16 +13,11 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     scrollingSpeed: 700,
     //menu: '.fullpage-menu',
-    anchors: ['homee', 'dumbbelll', 'contactt'],
-    afterLoad: function(origin, destination, direction){
-      var loadedSection = this;
-  
-      //using index
-      if(origin.index == 2){
-        alert("Section 3 ended loading");
-        
-      }
-    }
+    //anchors: ['homee', 'dumbbelll', 'contactt'],
+    afterLoad: function(anchorLink, index){
+      var loadedSection = $(this);
+       console.log("Trigger section" + index + " animation!");
+   }
   });
   
 
