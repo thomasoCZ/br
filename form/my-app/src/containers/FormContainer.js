@@ -52,13 +52,13 @@ class FormContainer extends Component {
             other: "",
         });
     }
-
-
     /**
      * @param event
      */
     handleSubmit = (event) => {
         event.preventDefault();
+
+
         var obj = JSON.stringify(this.state);
         fetch("http://localhost/br/sendMail.php", {
             method: 'post',
@@ -67,20 +67,23 @@ class FormContainer extends Component {
             },
             body: obj
         }).then(function (data) {
-                console.log('Request succeeded with JSON response', data);
-            })
-            .catch(function (error) {
+
+        }).then(
+            this.setState({
+            secondStep: false,
+            finalStep: true
+        })).catch(function (error) {
                 console.log('Request failed', error);
             });
     };
 
     render = () => {
         return (
+
             <Form state={this.state} handleOnChange={this.handleOnChange}
                   handleInputChange={this.handleInputChange} handleSubmit={this.handleSubmit}
                   handleOnBlur={this.handleOnBlur}
                   nextStepChange={this.nextStepChange}
-
 
             />
         );

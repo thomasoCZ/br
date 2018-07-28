@@ -23,9 +23,11 @@ textarea {
         //border-color: rgba(#000, 1);
     }
     &:focus+label {
-        color: #000;
+        color: #fff;
     }
 }
+
+
 
 textarea {
     max-width: 100%;
