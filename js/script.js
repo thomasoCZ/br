@@ -13,7 +13,6 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     scrollingSpeed: 700,
     //menu: '.fullpage-menu',
-    //anchors: ['homee', 'dumbbelll', 'contactt'],
     afterLoad: function(anchorLink, index){
       var loadedSection = $(this);
        console.log("Trigger section" + index + " animation!");
@@ -102,18 +101,15 @@ function homeIn() {
 
 
 $(window).on('load',function(){
-
+  $('body').addClass('fp-init');
+  $('.section--home').addClass('active');
   
-
+/*
   $('.loader__logo--front').addClass('animate');
   setTimeout(function(){
     $('body').addClass('fp-init');
     $('.section--home').addClass('active');
     homeIn();
   },2800);
-
-  
-    
- 
-   
+  */
 });
