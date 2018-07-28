@@ -12,21 +12,193 @@
   transform-origin: 50% 50%; //opacity: 0;
   //visibility: hidden;
   pointer-events: none;
-
   @media (min-width: $md) {
     position: absolute;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.5s;  
   }
-
+  
 }
 
 .section.active {
   pointer-events: all;
   opacity: 1;
   visibility: visible;
+  @media (min-width: $md) {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    transition: 1s 0.4s;
+  }
+}
+
+.project__title {
+  font-size: 5rem;
+  font-weight: 200;
+  color: #fff;
+  position: absolute;
+  text-shadow: 0 0 60px rgba(#000, 0.4);
+  bottom: 20%;
+  left: 58%;
+  z-index: 30;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: 2s ease-out 0s;
+  display: none;
+  
+    @media (min-width: $md) {
+      display: block;
+    }
+}
+
+.active .project__title {
+  transform: scale(1);
+  opacity: 1;
+  transition: 2s cubic-bezier(0.42, 0, 0, 0.99) 0.8s;
+}
+
+.project__info {
+ 
+  position: absolute;
+  bottom: 10%;
+  left: 60%; 
+  display: none;
+  
+    @media (min-width: $md) {
+      display: flex;
+    }
+  .info {
+    position: absolute;
+    top: 82%;
+    left: 62%;
+    z-index: 15;
+    width: 40%;
+    display: flex;
+    &__block {
+      margin-right: 4rem;
+    }
+    &__title {
+      font-family: $font-heading;
+      color: rgba(#000, 0.5);
+      text-transform: uppercase;
+      font-weight: 500;
+      display: block;
+      mix-blend-mode: overlay;
+      opacity: 0;
+      transition: 0.6s ease-out;
+    }
+    &__text {
+      color: #fff;
+      font-weight: 300;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      transition: 0.6s ease-out;
+      span {
+        display: block;
+        transform: translateY(100%);
+        transition: 0.6s ease-out;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        z-index: 1;
+        transform: translate3d(0, -110%, 0);
+      }
+    }
+  }
+}
+
+.active .info__block {
+  .info__title {
+    opacity: 1;
+    transition: opacity 1s 1.4s;
+  }
+  .info__text span {
+    transform: translateY(0);
+    transition: transform 1s cubic-bezier(0.63, 0.04, 0, 0.99) 1.5s;
+  }
+  .info__text:after {
+    transform: translate3d(0, 110%, 0);
+    transition: transform 1s cubic-bezier(0.63, 0.04, 0, 0.99) 1.4s;
+  }
+}
+
+.active .info__block:nth-of-type(2) {
+  .info__text span {
+    transition-delay: 1.7s;
+  }
+  .info__text:after {
+    transition-delay: 1.6s
+  }
+}
+
+.active .info__block:nth-of-type(3) {
+  .info__text span {
+    transition-delay: 1.9s;
+  }
+  .info__text:after {
+    transition-delay: 1.8s
+  }
+}
+
+.big-text {
+
+  font-size: 38rem;
+  font-family: $font-heading;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -1.4rem;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform-origin: 50% 50%;
+  transform: translate3D(-50%, -50%, 0) scale3D(0.85, 0.85, 1);
+  will-change: transform;
+  transition: 1s ease-out;
+  pointer-events: none;
+  display: none;
 
   @media (min-width: $md) {
-    opacity: 1;
+    display: block;
+    opacity: 0;
   }
 
+  &--bottom {
+    z-index: -1;
+    color: rgba(#12151f,0.05);
+    //text-shadow: 0 0 160px #f0f0f0;
+  }
+  &--top {
+    z-index: 1;
+    mix-blend-mode: overlay; 
+    color: rgba(#fff, 0.2);
+    /*
+    
+    background-image: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 50%, #fff 50%, #fff 75%, transparent 75%, transparent);
+    background-size:20px 20px;
+     animation: barberpole-body-case-hover 2.5s linear infinite; 
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 0px;
+ */
+  }
+}
+
+.active .big-text {
+  transform: translate3D(-50%, -50%, 0) scale3D(1, 1, 1);
+  transition: transform 10s ease-out 0.3s, opacity 4s 0.3s;
+  opacity: 1;
 }

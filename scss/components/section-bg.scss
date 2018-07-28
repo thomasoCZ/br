@@ -3,10 +3,12 @@
   position: absolute;
   z-index: -1;
   background-size: cover;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 0;
 
   @media (min-width: $md) {
     width: 50%;
@@ -17,6 +19,11 @@
 .section--home .section-bg, .section--contact .section-bg {
   background-image: linear-gradient(to top, #12151f, #000000);
 
+  @media (min-width: $md) {
+    transform: rotate(-11deg) scale(1.7) translateX(0%);
+    background-color: #12151f;
+  }
+
   &:after {
     content: '';
     display: block;
@@ -26,9 +33,15 @@
     width: 100%;
     height: 100%;
     background: #fff;
+    //opacity: 0.05;
     mix-blend-mode: overlay;
-    -ms-transform: rotate(15deg) scale(3);
-    transform: rotate(-45deg) scale(1.5) translateX(-50%);
+    transform-origin: 50% 50%;
+    transform: rotate(35deg) scaleY(3) translateX(-50%);
+
+    @media (min-width: $md) {
+      //display: none;
+    }
+
   }
 }
 

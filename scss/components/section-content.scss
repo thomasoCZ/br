@@ -9,9 +9,9 @@
 
 
   @media (min-width: $md) {
-    padding: 3rem;
+    padding: 5rem;
     width: 50%;
-    left: 50%;
+    left: 40%;
     color: #fff;
   }
 }
@@ -21,8 +21,14 @@
   &__title {
     font-size: 1.2rem;
     overflow: hidden;
+    font-weight: 400;
     //text-align: center;
     color: #fff;
+
+    @media (min-width: $md) {
+     
+      font-size: 2.2rem;
+    }
 
     span {
       display: block;      
@@ -86,9 +92,7 @@
   height: 50%;
 
   @media (min-width: $md) {
-    left: 50%;
-    align-items: flex-end;
-    justify-content: flex-end;
+    display: none;
   }
 
   &__inner {
