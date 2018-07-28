@@ -1,0 +1,101 @@
+#form {
+
+  text-align: center;
+
+  label{
+    font-family: $font-heading;
+    text-transform: uppercase;
+  }
+
+  h2{
+      margin-bottom: 2rem;
+  }
+  .hide {
+    display: none;
+  }
+  .button{
+    margin-top: 2rem;
+  }
+
+  .checkboxGrid{
+    display: block;
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  .formGrid{
+      text-align: left;
+    div{
+      border-bottom: 1px solid #1d2b33;
+      margin-bottom: 1rem;
+
+
+
+
+    }
+  }
+
+  .checkbox {
+
+    flex: calc(50% - 10px);
+    text-align: left;
+    padding: 0.8rem;
+    background: #1d2529;
+    margin: 5px;
+    label input[type=radio],
+    label input[type=checkbox] {
+      display: none;
+    }
+    label {
+
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding-left: 1.75rem;
+      line-height: 1.5rem;
+      cursor: pointer;
+      position: relative;
+    }
+    label > span.square
+    {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1rem;
+      height: 1rem;
+      margin: 0.25rem 0;
+      border: 0.125rem solid #B0BEC5;
+      -webkit-transition: 0.1s all;
+      transition: 0.1s all;
+    }
+    label input[type=checkbox]:checked ~ span.square {
+      border: 0.125rem solid $color1;
+    }
+    label input[type=checkbox]:checked ~ span.square:after {
+      content: "";
+      position: absolute;
+      margin: 0.125rem;
+      display: inline-block;
+      background: $color1;
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+}

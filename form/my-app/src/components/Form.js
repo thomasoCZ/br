@@ -4,9 +4,11 @@ class Form extends Component {
     render() {
         return (
             <div className="contact-form">
-                <h2>What do you need from us ?</h2>
+
                 <form onSubmit={this.props.handleSubmit}>
-                    <div className={this.props.state.secondStep === false ? 'active' : ''}>
+                    <div className={this.props.state.secondStep === false && this.props.state.finalStep === false ? 'active' : 'hide'}>
+                    <h2>What do you need from us ?</h2>
+                    <div className="checkboxGrid">
                     <div className="checkbox">
                         <label>
                             <input type="checkbox" value="web"
@@ -15,6 +17,7 @@ class Form extends Component {
                                    onChange={this.props.handleInputChange}
 
                             />
+                            <span class="square"></span>
                             Website development
                         </label>
                     </div>
@@ -24,6 +27,7 @@ class Form extends Component {
                                    name="animation"
                                    onChange={this.props.handleInputChange}
                             />
+                            <span class="square"></span>
                             Animation / Video
                         </label>
                     </div>
@@ -33,6 +37,7 @@ class Form extends Component {
                                    name="shop"
                                    onChange={this.props.handleInputChange}
                             />
+                            <span class="square"></span>
                             Shop/Ecommerce solution
                         </label>
                     </div>
@@ -42,6 +47,7 @@ class Form extends Component {
                                    name="consulting"
                                    onChange={this.props.handleInputChange}
                             />
+                            <span class="square"></span>
                             UX / Design / Marketing Consulting
                         </label>
                     </div>
@@ -51,6 +57,7 @@ class Form extends Component {
                                    name="app"
                                    onChange={this.props.handleInputChange}
                             />
+                            <span class="square"></span>
                            Web App
                         </label>
                     </div>
@@ -60,30 +67,37 @@ class Form extends Component {
                                    name="other"
                                    onChange={this.props.handleInputChange}
                             />
+                            <span class="square"></span>
                             Other ?
                         </label>
                     </div>
-                    <button  className="btn" onClick={this.props.nextStepChange}>
+                    </div>
+                    <button className="button--outline button" onClick={this.props.nextStepChange}>
                         <span className="btn__text">Continue</span>
                     </button>
                     </div>
-                    <div className={this.props.state.secondStep === true ? 'active' : ''}>
-                        <label>
-                            Full Name:
+                    <div className={this.props.state.secondStep === true ? 'active' : 'hide'}>
+                        <h2>Leave us a message</h2>
+                        <div className="formGrid">
+
+                            <div>
+                        <label htmlFor="name">Full Name:</label>
                             <input type="text"
                                    name="name"
                                    value={this.props.state.name}
                                    onChange={this.props.handleInputChange}
                                    required="required"
+                                   id="name"
                             />
-                        </label>
+                            </div>
                         <div>
-                        <label>Emal Address:</label>
-                            <input type="text"
+                        <label htmlFor="address">Emal Address:</label>
+                            <input type="email"
                                    name="address"
                                    value={this.props.state.address}
                                    onChange={this.props.handleInputChange}
                                    required="required"
+                                   id="address"
                             />
                         </div>
                         <div>
@@ -98,12 +112,15 @@ class Form extends Component {
                                 required="required"
                             />
                         </div>
-                        <button type="submit" className="btn">
+                        </div>
+                        <button type="submit" className="button--outline button">
                             <span className="btn__text">Odeslat</span>
                         </button>
                     </div>
-                    <div className={this.props.state.finalStep === true ? 'active' : ''}>
-                        <h3>Thank you for your message</h3>
+                    <div className={this.props.state.finalStep === true ? 'active' : 'hide'}>
+                        <h3>Thank you for your message<br />
+                        We will back to you soon
+                    </h3>
                     </div>
                 </form>
             </div>
