@@ -9,12 +9,15 @@
         height: auto;
         position: absolute;
         max-width: 70vh;
+        max-height: 100%;
         top: 5vh;
         right: -10vh;
 
         @media (min-width: $sm) {
             right: 0;
             max-width: 100%;
+            right: 50%;
+            transform: translateX(50%);
         }
 
         @media (min-width: $md) {

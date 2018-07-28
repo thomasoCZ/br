@@ -9,22 +9,24 @@
   height: 100vh;
   will-change: transform;
   transform: translate3d(0, 0, 0);
-  transform-origin: 50% 50%;
-  //opacity: 0;
+  transform-origin: 50% 50%; //opacity: 0;
   //visibility: hidden;
   pointer-events: none;
+
+  @media (min-width: $md) {
+    position: absolute;
+    opacity: 0;
+  }
+
 }
 
 .section.active {
   pointer-events: all;
   opacity: 1;
   visibility: visible;
+
+  @media (min-width: $md) {
+    opacity: 1;
+  }
+
 }
-
-
-
-
-
-
-
-

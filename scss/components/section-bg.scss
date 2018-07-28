@@ -33,13 +33,27 @@
 }
 
 
-.section--dumbbell .section-bg {
+
+.section--work .section-bg {
   transform: scale(1.4) rotate(15deg) translateY(-24%);
-  //background: #ff3700;
-  background: radial-gradient(circle at 20% 80%, #fa653f, #ab1957, #000);
   height: 50%;
+  
+  @media (min-width: $md) {
+    height: 100%;
+    transform: none;
+  }
+}
+
+
+
+// work background gradients
+
+.section--dumbbell .section-bg {
+  background: radial-gradient(circle at 20% 80%, #fa653f, #ab1957);
 }
 .section--ixion .section-bg {
-  background: #1f82e6;
-  height: 50%;
+  background: radial-gradient(circle at 20% 80%, #1f82e6, #082754);
+}
+.section--phc .section-bg {
+  background: radial-gradient(circle at 20% 80%, #99da26, #2e812b);
 }
