@@ -5,12 +5,12 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 1.2rem;
+  padding: 5%;
 
 
   @media (min-width: $md) {
-    padding: 5rem;
-    width: 50%;
+    padding: 10%;
+    width: 60%;
     left: 40%;
     color: #fff;
   }
@@ -26,8 +26,9 @@
     color: #fff;
 
     @media (min-width: $md) {
-     
-      font-size: 2.2rem;
+    
+      font-size: 1.6rem;
+
     }
 
     span {
@@ -55,6 +56,18 @@
   &__title {
     font-size: 2rem;
   }
+
+  &__cities {
+    display: flex;
+
+    span {
+      text-transform: uppercase;
+      font-family: $font-heading;
+
+    }
+
+  }
+
 
 
   &__mail, &__phone {
@@ -107,7 +120,7 @@
     font-family: khand;
     display: block;
     letter-spacing: -1px;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 
     &:after {
       content: '';
@@ -115,6 +128,7 @@
       width: 30px;
       height: 2px;
       background-color: orange;
+      display: none;
     }
   }
 

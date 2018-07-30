@@ -6,6 +6,12 @@
     left: 0;
     z-index: 2;
 
+    @media (min-width: $md) {   
+        transition: 4s cubic-bezier(0.42, 0, 0, 0.99) 2s;
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
     img {
         height: auto;
         position: absolute;
@@ -31,4 +37,11 @@
     }
     
 
+}
+
+.active .section-mockup {
+    @media (min-width: $md) {
+    transform: scale(1);
+    opacity: 1;
+    }
 }

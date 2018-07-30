@@ -1,0 +1,41 @@
+.home-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  margin-top: 3rem;
+  background-color: $color1;
+  display: none;
+
+  @media (min-width: $sm) {
+    display: block;
+  }
+
+}
+
+.home-services {
+  margin-top: 3rem;
+  position: absolute;
+  left: auto;
+  bottom: 2rem;
+  color: #fff;
+  opacity: 0.3;
+  display: none;
+  
+  @media (min-width: $sm) {
+    display: flex;
+    opacity: 1;
+    display: none;
+  }
+
+  &__item {
+
+    font-family: $font-heading;
+    text-transform: uppercase;
+    margin-right: 3rem;
+
+    @media (max-width: $sm) {
+      
+    }
+
+  }
+}

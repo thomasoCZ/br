@@ -11,7 +11,7 @@ $(document).ready(function() {
   // desktop fullpage init
 
   $('#fullpage').fullpage({
-    scrollingSpeed: 7,
+    scrollingSpeed: 700,
     //menu: '.fullpage-menu',
     afterLoad: function(anchorLink, index){
       var loadedSection = $(this);
