@@ -14,14 +14,38 @@ class FormContainer extends Component {
         app: "",
         other: "",
         secondStep: false,
-        finalStep: false
+        finalStep: false,
+        isValid: ""
+    };
+
+
+    isSomethingChecked = (state) => {
+
+        let helperObject = ["web",
+            "animation",
+            "shop",
+            "consulting",
+            "app",
+            "other"
+        ];
+        let result = false;
+        helperObject.map(function (service) {
+            if (state[service] == true) {
+                result = true;
+            }
+        });
+        return result;
+
     };
 
 
     nextStepChange = (event) => {
         event.preventDefault();
+
+
         this.setState({
-            secondStep: true
+            secondStep: this.isSomethingChecked(this.state),
+            isValid: this.isSomethingChecked(this.state)
         });
     };
 
@@ -52,14 +76,16 @@ class FormContainer extends Component {
             other: "",
         });
     }
+
     /**
      * @param event
      */
     handleSubmit = (event) => {
         event.preventDefault();
 
+        let result = this.state;
+        let obj = JSON.stringify(result);
 
-        var obj = JSON.stringify(this.state);
         fetch("http://localhost/br/sendMail.php", {
             method: 'post',
             headers: {
@@ -70,11 +96,11 @@ class FormContainer extends Component {
 
         }).then(
             this.setState({
-            secondStep: false,
-            finalStep: true
-        })).catch(function (error) {
-                console.log('Request failed', error);
-            });
+                secondStep: false,
+                finalStep: true
+            })).catch(function (error) {
+            console.log('Request failed', error);
+        });
     };
 
     render = () => {
