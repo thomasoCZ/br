@@ -7,11 +7,13 @@
  */
 
 header('Access-Control-Allow-Origin: *');
-
+ $table = '';
 // data pro odeslani
-if(isset($_POST)){
-    foreach($_REQUEST as $key=>$value ){
+if(isset($_POST['formData'])){
 
+
+    foreach(json_decode($_POST['formData']) as $key=>$value ){
+           $table.= '<tr><td>'.$key.'</td><td>'.$value.'</td></tr>';
     }
 }
 
@@ -22,7 +24,7 @@ try{
         'apikey' => '9efda854-9401-4104-8360-bfc39c6e0882',
         'subject' => 'Kontakt z webu brivestudio',
         'to' => 'radovanmail@gmail.com',
-        'bodyHtml' => '<h1>Html Body</h1>',
+        'bodyHtml' => '<table>'.$table.'</table>',
         'bodyText' => 'Text Body',
         'isTransactional' => false);
     $ch = curl_init();
