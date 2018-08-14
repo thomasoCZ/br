@@ -1,12 +1,88 @@
-$(document).ready(function() {
 
-  var mobile = window.matchMedia("(max-width: 767px)");
+/*
+function homeIn() {
 
-  if (mobile.matches) {
+  // split lines
+
+  
+  
+    $('.split-text').splitLines({
+      tag: '<div class="split-line"><span>',
+      //width: 'calc(100% - 2.8rem)',
+      //width: '80%',
+      //width: '100%',
+      keepHtml: true
+    });
+  
+    $('.split-line').each(function(i){
+      
+        var $item = $(this).find('span');
+    
+        setTimeout(function(){
+          //$item.addClass('in');
+        }, 200*i);
+    });
+  
+    // home featured in
+  
+    setTimeout(function(){
+      $('.home-featured').addClass('in');
+    }, 500);
+  
+  
+  }
+
+  */
+
+
+ var mobile = window.matchMedia("(max-width: 767px)");
+
+ 
+
+  function SplitEm() {
+
+    var splitWidth = '80%';
+
+    if (mobile.matches) {
+      splitWidth = 'calc(100% - 2.8rem)'
+    }
+
+    $('.split-text').each(function(i){
+      $(this).splitLines({
+        tag: '<div class="split-line"><span>',
+        width: splitWidth,
+        //width: '100%',
+        keepHtml: true
+      });
+
+    });
 
   }
 
 
+
+// ====================================== document ready ==================================
+
+$(document).ready(function() {
+
+ 
+
+
+  SplitEm();
+
+
+
+  $('.home-logos__item').click(function(){
+
+    var thisTarget = $(this).data('target');
+    
+    $('.home-logos__item').removeClass('active');
+    $(this).addClass('active');
+    
+    $('.split-text').removeClass('active');
+    $('#' + thisTarget).addClass('active');
+
+  });
 
   // desktop fullpage init
 
@@ -68,36 +144,8 @@ $(document).ready(function() {
 
 });
 
-function homeIn() {
 
-  // split lines
-  
-    $('.split-text').splitLines({
-      tag: '<div class="split-line"><span>',
-      width: 'calc(100% - 2.8rem)',
-      //width: '100%',
-      keepHtml: true
-    });
-  
-    $('.split-line').each(function(i){
-      
-        var $item = $(this).find('span');
-    
-        setTimeout(function(){
-          $item.addClass('in');
-        }, 200*i);
-    });
-  
-    // home featured in
-  
-    setTimeout(function(){
-      $('.home-featured').addClass('in');
-    }, 500);
-  
-  
-  }
-
-
+// ====================================== window load ==================================
 
 
 $(window).on('load',function(){
@@ -111,5 +159,9 @@ $(window).on('load',function(){
     $('.section--home').addClass('active');
     homeIn();
   },2800);
+
   */
+  
 });
+
+
