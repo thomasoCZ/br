@@ -33,11 +33,13 @@
     margin-top: 1rem;
     opacity: 0.4;
     transition: 0.4s;
+    cursor: pointer;
+    
     @media (min-width: $sm) {
       margin-top: 0;
     }
 
-    &:hover {
+    &:hover, &.active {
       opacity: 1;
     }
 

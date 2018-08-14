@@ -90,12 +90,28 @@ h6 {
 	//display: inline-block;
 
 	 span {
-		transform: translateY(100%);
-		transition: 2s;
+		transform: translateY(120%);
+		transition: 1s cubic-bezier(0.38, 0.01, 0.2, 1);
 
 		&.in {
 			transform: translateY(0);
 		}
+	}
+}
+
+
+.split-text {
+	position: absolute;
+    left: auto;
+	top: auto;
+	bottom: 50%;
+	transform: translateY(50%);
+}
+
+.split-text.active .split-line {
+	span {
+		transform: translateY(0);
+		transition: 1.4s cubic-bezier(0.38, 0.01, 0.2, 1);
 	}
 }
 
@@ -114,7 +130,7 @@ h6 {
 
 
 * {
-	transition: 0s !important;
+	//transition: 0s !important;
 }
 
 #fullpage {
