@@ -5,9 +5,21 @@
   margin-top: 6rem;
   background-color: $color1;
   display: none;
+  transform-origin: 0 50%;
 
   @media (min-width: $sm) {
     display: block;
+  }
+
+
+  @keyframes homelineanimate {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+
+  &.animate {
+    //animation: homelineanimate 1.4s cubic-bezier(0.38, 0.01, 0.2, 1) 0.4s normal;
   }
 
 }
