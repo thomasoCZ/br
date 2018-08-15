@@ -26,9 +26,7 @@
     color: #fff;
 
     @media (min-width: $md) {
-    
       font-size: 1.6rem;
-
     }
 
     span {
@@ -128,7 +126,7 @@
       width: 30px;
       height: 2px;
       background-color: orange;
-      //display: none;
+      display: none;
     }
   }
 
