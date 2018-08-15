@@ -18,7 +18,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
 
                                     />
-                                    <span class="square"></span>
+                                    <span className="square"></span>
                                     Website development
                                 </label>
                             </div>
@@ -28,7 +28,7 @@ class Form extends Component {
                                            name="animation"
                                            onChange={this.props.handleInputChange}
                                     />
-                                    <span class="square"></span>
+                                    <span className="square"></span>
                                     Animation / Video
                                 </label>
                             </div>
@@ -38,7 +38,7 @@ class Form extends Component {
                                            name="shop"
                                            onChange={this.props.handleInputChange}
                                     />
-                                    <span class="square"></span>
+                                    <span className="square"></span>
                                     Shop/Ecommerce solution
                                 </label>
                             </div>
@@ -48,7 +48,7 @@ class Form extends Component {
                                            name="consulting"
                                            onChange={this.props.handleInputChange}
                                     />
-                                    <span class="square"></span>
+                                    <span className="square"></span>
                                     UX / Design / Marketing Consulting
                                 </label>
                             </div>
@@ -58,7 +58,7 @@ class Form extends Component {
                                            name="app"
                                            onChange={this.props.handleInputChange}
                                     />
-                                    <span class="square"></span>
+                                    <span className="square"></span>
                                     Web App
                                 </label>
                             </div>
@@ -68,10 +68,17 @@ class Form extends Component {
                                            name="other"
                                            onChange={this.props.handleInputChange}
                                     />
-                                    <span class="square"></span>
+                                    <span className="square"></span>
                                     Other ?
                                 </label>
                             </div>
+
+                            {this.props.state.isValid === false &&
+                            <div className="isNotValid">
+                                Please chose some service
+                            </div>
+                            }
+
                         </div>
                         <button className="button--outline button" onClick={this.props.nextStepChange}>
                             <span className="btn__text">Continue</span>

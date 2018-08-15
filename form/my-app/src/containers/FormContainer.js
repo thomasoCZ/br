@@ -14,14 +14,38 @@ class FormContainer extends Component {
         app: "",
         other: "",
         secondStep: false,
-        finalStep: false
+        finalStep: false,
+        isValid: ""
+    };
+
+
+    isSomethingChecked = (state) => {
+
+        let helperObject = ["web",
+            "animation",
+            "shop",
+            "consulting",
+            "app",
+            "other"
+        ];
+        let result = false;
+        helperObject.map(function (service) {
+            if (state[service] == true) {
+                result = true;
+            }
+        });
+        return result;
+
     };
 
 
     nextStepChange = (event) => {
         event.preventDefault();
+
+
         this.setState({
-            secondStep: true
+            secondStep: this.isSomethingChecked(this.state),
+            isValid: this.isSomethingChecked(this.state)
         });
     };
 
@@ -52,29 +76,31 @@ class FormContainer extends Component {
             other: "",
         });
     }
+
     /**
      * @param event
      */
     handleSubmit = (event) => {
         event.preventDefault();
 
+        let formEmail = new FormData();
+        formEmail.append('formData', JSON.stringify( this.state ));
 
-        var obj = JSON.stringify(this.state);
         fetch("http://localhost/br/sendMail.php", {
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
             },
-            body: obj
+            body: formEmail
         }).then(function (data) {
 
         }).then(
             this.setState({
-            secondStep: false,
-            finalStep: true
-        })).catch(function (error) {
-                console.log('Request failed', error);
-            });
+                secondStep: false,
+                finalStep: true
+            })).catch(function (error) {
+            console.log('Request failed', error);
+        });
     };
 
     render = () => {
