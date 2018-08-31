@@ -120,6 +120,11 @@ h6 {
 		margin-top: 2rem;
 		transition: 0.4s cubic-bezier(0.38, 0.01, 0.2, 1);
 	  }
+
+	  span {
+		  display: block;
+		  will-change: transform;
+	  }
 }
 
 
