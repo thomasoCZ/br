@@ -25,8 +25,9 @@
   background-image: linear-gradient(to top, #12151f, #000000);
   @media (min-width: $md) {
     width: 60%;
-    //transform: rotate(-11deg) scale(1.7) translateX(0%);
+    transform: scale(1);
     background-color: #12151f;
+    transform-origin: 0% 50%;
   }
   &:after {
     content: '';
@@ -62,10 +63,19 @@
 
   @media (min-width: $md) {
     transform: scaleX(1);
-    transition: 3s cubic-bezier(0.42, 0, 0, 0.99) 1s;
+    transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0.2s;
   }
   
 }
+
+.active.section--home .section-bg {
+  
+    @media (min-width: $md) {
+      transform: scale(1);
+      transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0.2s;
+    }
+    
+  }
 
 
 
