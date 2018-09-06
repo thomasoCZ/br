@@ -1,7 +1,7 @@
 .button, input[type=submit], input[type=button]  {
 	display: inline-block;
 	background-color: $color1;
-	padding: 0.6rem 3rem 0.5rem;
+	padding: 0.8rem 3rem 0.6rem;
 	margin: 0;
 	border: 2px solid transparent;
 	text-transform: uppercase;
@@ -42,5 +42,8 @@
 	&:hover {
 		//border-color: rgba(#fff,1);
 		//box-shadow: 0 0 60px 0 rgba(#fff,0.4);
+	}
+	&:active, &:focus {
+		background-color: transparent !important;
 	}
 }

@@ -1,27 +1,7 @@
 
-/*
+
 function homeIn() {
 
-  // split lines
-
-  
-  
-    $('.split-text').splitLines({
-      tag: '<div class="split-line"><span>',
-      //width: 'calc(100% - 2.8rem)',
-      //width: '80%',
-      //width: '100%',
-      keepHtml: true
-    });
-  
-    $('.split-line').each(function(i){
-      
-        var $item = $(this).find('span');
-    
-        setTimeout(function(){
-          //$item.addClass('in');
-        }, 200*i);
-    });
   
     // home featured in
   
@@ -32,7 +12,7 @@ function homeIn() {
   
   }
 
-  */
+  
 
 
  var mobile = window.matchMedia("(max-width: 767px)");
@@ -153,10 +133,10 @@ $(document).ready(function() {
 
 
 $(window).on('load',function(){
-  $('body').addClass('fp-init');
-  $('.section--home').addClass('active');
+  //$('body').addClass('fp-init');
+  //$('.section--home').addClass('active');
   
-/*
+
   $('.loader__logo--front').addClass('animate');
   setTimeout(function(){
     $('body').addClass('fp-init');
@@ -164,7 +144,7 @@ $(window).on('load',function(){
     homeIn();
   },2800);
 
-  */
+  
   
 });
 

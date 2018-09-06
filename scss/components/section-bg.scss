@@ -1,7 +1,7 @@
 .section-bg {
   background-color: #12151f;
   position: absolute;
-  z-index: -1;
+  z-index: -1 !important;
   background-size: cover;
   overflow: hidden;
   width: 100%;
@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
   z-index: 0;
+  will-change: transform;
   @media (min-width: $md) {
     left: auto;
     right: 0;
@@ -54,6 +55,7 @@
   @media (min-width: $md) {
     height: 100%;
     transform: scaleX(0);
+    opacity: 0;
     transform-origin: 0% 50%;
     transition: 0s ease-out 0.7s;
   }
@@ -62,8 +64,9 @@
 .active.section--work .section-bg {
 
   @media (min-width: $md) {
-    transform: scaleX(1);
-    transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0.2s;
+    transform: scaleY(1);
+    opacity: 1;
+    transition: transform 2s cubic-bezier(0.42, 0, 0, 0.99) 0.7s, opacity 1s;
   }
   
 }
