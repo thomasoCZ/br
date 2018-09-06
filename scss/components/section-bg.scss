@@ -68,17 +68,6 @@
   
 }
 
-.active.section--home .section-bg {
-  
-    @media (min-width: $md) {
-      transform: scale(1);
-      transition: 3.8s cubic-bezier(0.42, 0, 0, 0.99) 0.2s;
-    }
-    
-  }
-
-
-
 
 
 
@@ -94,3 +83,9 @@
 .section--phc .section-bg {
   background: radial-gradient(circle at 20% 80%, #99da26, #2e812b);
 }
+
+.section--stoica .section-bg {
+  background: radial-gradient(circle at 20% 80%, #5b2e77, #252147);
+}
+
+

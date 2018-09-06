@@ -16,7 +16,7 @@
   }
 }
 
-.section--home .section-content {
+.section--home .section-content, .section--contact .section-content {
 
   &__title {
     font-size: 1.2rem;
@@ -31,65 +31,14 @@
     
   }
 
+  &__email {
+    color: $color1;
+  }
+
   &__button {
-    display: none;
-    margin-top: 1.6rem;
+    margin-top: 2rem;
   }
 
-
-
-}
-
-.section--contact .section-content {
-
-  justify-content: center;
-
-  &__inner {
-    text-align: center;
-  }
-  
-  &__title {
-    font-size: 2rem;
-  }
-
-  &__cities {
-    display: flex;
-
-    span {
-      text-transform: uppercase;
-      font-family: $font-heading;
-
-    }
-
-  }
-
-
-
-  &__mail, &__phone {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.3rem;
-
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-  }
-
-  &__mail {
-    a {
-      
-    }
-  }
-
-  .button {
-    position: absolute;
-    bottom: 3rem;
-    width: fit-content;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 2px;
-  }
 }
 
 .section--work .section-content{

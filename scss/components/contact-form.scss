@@ -3,6 +3,14 @@
 
   text-align: center;
 
+  .isNotValid {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    color: orange;
+  }
+
   label {
     font-family: $font-heading;
     text-transform: uppercase;
@@ -70,6 +78,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
+      justify-content: center;
     }
   }
 
