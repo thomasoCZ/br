@@ -76,6 +76,13 @@
     }
   }
 
+  &__link {
+    text-transform: uppercase;
+    font-family: $font-heading;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
   &__info {
     
     position: relative;
@@ -95,3 +102,19 @@
 
 }
 
+
+.section--dumbbell .section-content__link {
+  color: $color1;
+}
+
+.section--ixion .section-content__link {
+  color: #1f82e6;
+}
+
+.section--phc .section-content__link {
+  color: #2e812b;
+}
+
+.section--stoica .section-content__link {
+  color: #5b2e77;
+}

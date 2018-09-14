@@ -8,6 +8,11 @@
   @media (min-width: $sm) {
     bottom: 2rem;
     right: 2rem;
+
+  }
+
+  @media (min-width: $md) {
+    //display: none;
   }
 
   &__title {
@@ -22,11 +27,14 @@
     span {
       display: block;
       transform: translateX(100%);
+
+      @media (min-width: $sm) {
+        transform: translateX(0%);
+      }
       
     }
   }
 
-  
 
   &__line {
     display: block;
@@ -48,7 +56,11 @@
       transform-origin: 0 0;
       background-color: $color1;
       //background: linear-gradient(to right, rgba($color1,0), rgba($color1,1));
-      transform: translateX(-100%)
+      transform: translateX(-100%);
+
+      @media (min-width: $sm) {
+        transform: translateX(100%);
+      }
     }
   }
 

@@ -7,6 +7,7 @@ function homeIn() {
   
     setTimeout(function(){
       $('.home-featured').addClass('in');
+      $('#intro').addClass('active');
     }, 500);
   
   
@@ -138,6 +139,8 @@ $(window).on('load',function(){
   
 
   $('.loader__logo--front').addClass('animate');
+
+  
   setTimeout(function(){
     $('body').addClass('fp-init');
     $('.section--home').addClass('active');

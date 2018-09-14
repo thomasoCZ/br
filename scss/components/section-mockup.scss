@@ -19,7 +19,11 @@
         max-width: 70vh;
         max-height: 100%;
         top: 5vh;
-        right: -10vh;
+        //right: -10vh;
+
+        right: 50%;
+            transform: translateX(50%);
+
 
         @media (min-width: $sm) {
             right: 0;
