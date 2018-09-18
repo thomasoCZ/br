@@ -27,6 +27,7 @@ class Form extends Component {
                                     <input type="checkbox" value="animation"
                                            name="animation"
                                            onChange={this.props.handleInputChange}
+
                                     />
                                     <span className="square"></span>
                                     Animation / Video
@@ -95,6 +96,7 @@ class Form extends Component {
                                        onChange={this.props.handleInputChange}
                                        required="required"
                                        id="name"
+                                       placeholder="Your Name"
                                 />
                                 <label htmlFor="name">Full Name:</label>
                             </div>
@@ -105,6 +107,7 @@ class Form extends Component {
                                        onChange={this.props.handleInputChange}
                                        required="required"
                                        id="address"
+                                       placeholder="Your Email"
                                 />
                                 <label htmlFor="address">Emal Address:</label>
 
@@ -116,7 +119,7 @@ class Form extends Component {
                                     rows="5"
                                     value={this.props.state.message}
                                     onChange={this.props.handleInputChange}
-                                    placeholder=""
+                                    placeholder="Message"
                                     required="required"
                                     id="message"
                                 />
