@@ -1,14 +1,32 @@
 .contact-details {
-  //display: none;
-  font-family: $font-heading;
-  text-transform: uppercase;
-  
+  position: absolute;
+  left: auto;
+  bottom: 2rem;
+
+  @media (min-width: $sm) {
+    bottom: 4rem;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+        
+    @media (min-width: $sm) {
+      flex-direction: row;
+    }
+  }
+
   a {
     color: #fff;
+    font-family: $font-heading;
+    font-size: 1.4rem;
     transition: 0.3s;
     text-decoration: none;
-    &.hover {
+    margin-right: 2rem;
+
+    &:hover {
       color: $color1;
     }
   }
+
 }

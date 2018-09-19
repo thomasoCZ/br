@@ -32,6 +32,10 @@
   svg .circle {
     opacity: 1;
   }
+
+  span:before {
+    transform: scaleX(1);
+  }
 }
 
 .business-form__icon span {
@@ -44,6 +48,28 @@
   width: 5rem;
   font-size: 1rem;
   font-weight: 500;
+
+  display: none;
+
+  @media (min-width: $sm) {
+    display: block;
+  }
+
+/*
+  &:before {
+    content: '';
+    display: block;
+    background: #fff;
+    height: 2px;
+    width: calc(100% - 1rem);
+    position: absolute;
+    bottom: 0;
+    will-change: transform;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: 0.8s cubic-bezier(0.68, 0.02, 0, 0.96) 0.2s;
+  }
+  */
 }
 
 
@@ -59,7 +85,7 @@
   align-items: flex-start;
   justify-content: center;
   color: #fff;
-  background: rgba(0,0,0,0.95);
+  background: rgba(0,0,0,1);
   opacity: 0;
   visibility: hidden;
   overflow: auto;

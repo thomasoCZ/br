@@ -13,20 +13,10 @@
     bottom: 4rem;
   }
 
-  &__text {
-    margin: 10rem auto 3rem;
-    max-width: 600px;
-    //font-size: 0.8rem;
-    color: #fff;
-  }
-
   &__grid {
         
     @media (min-width: $sm) {
       display: flex;
-      top: auto;
-      bottom: 4rem;
-      left: auto;
     }
   }
 

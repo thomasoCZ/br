@@ -60,7 +60,6 @@ $(document).ready(function() {
     $('.home-logos__item').removeClass('active');
     $(this).addClass('active');
     
-
     $('.home-line').removeClass('animate');
     $('.split-text').removeClass('active');
     
@@ -76,8 +75,15 @@ $(document).ready(function() {
     //menu: '.fullpage-menu',
     afterLoad: function(anchorLink, index){
       var loadedSection = $(this);
-       console.log("Trigger section" + index + " animation!");
+       //console.log("Trigger section" + index + " animation!");
    }
+  });
+
+
+  // home feature click
+
+  $('.home-featured').click(function(){
+    $.fn.fullpage.moveTo(2, 0);
   });
   
 

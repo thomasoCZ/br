@@ -70,13 +70,13 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Other ?
+                                    Other
                                 </label>
                             </div>
 
                             {this.props.state.isValid === false &&
                             <div className="isNotValid">
-                                Please chose some service
+                                Please select one or more options
                             </div>
                             }
 
@@ -131,8 +131,8 @@ class Form extends Component {
                         </button>
                     </div>
                     <div className={this.props.state.finalStep === true ? 'active' : 'hide'}>
-                        <h3>Thank you for your message<br />
-                            We will back to you soon
+                        <h3>Thank you for your message.<br />
+                            We will get back to you soon.
                         </h3>
                     </div>
                 </form>

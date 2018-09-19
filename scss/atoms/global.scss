@@ -72,6 +72,14 @@ h6 {
 	}
 }
 
+
+.break-md {
+	display: none;
+	@media (min-width: 1360px) {
+		display: initial;
+	}
+}
+
 #fullpage {
 	height: 100%;
 	position: relative;
@@ -135,7 +143,6 @@ h6 {
 		  will-change: transform;
 	  }
 }
-
 
 
 

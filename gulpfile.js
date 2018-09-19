@@ -26,15 +26,15 @@ gulp.task('sass', function() {
 
 	var processors = [
 	autoprefixer({browsers: ['last 4 versions']}),
-	//cssnano(),
+	cssnano(),
 	];
 
 	return gulp.src('scss/style.scss')
-	.pipe(sourcemaps.init())
+	//.pipe(sourcemaps.init())
 	.pipe(sass())
 	.on('error', swallowError) 
 	.pipe(postcss(processors))
-	.pipe(sourcemaps.write())
+	//.pipe(sourcemaps.write())
 	.on('error', swallowError) 
 	.pipe(gulp.dest(''));
 
@@ -59,6 +59,6 @@ gulp.task('watch', function(){
 		}
 	}),
 	gulp.watch(['scss/*.scss','scss/**/*.scss'], ['sass-watch']);
-	//gulp.watch('js/script.js', ['scripts']);
+	gulp.watch('js/script.js', ['scripts']);
 	
 });

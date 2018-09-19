@@ -15,7 +15,7 @@ textarea {
     font-size: 1rem;
 
     &::placeholder {
-        color: #ddd;
+        color: rgba(#fff,0.6);
         opacity: 1;
         font-family: $font-base;
     }
