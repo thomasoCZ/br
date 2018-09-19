@@ -22,8 +22,10 @@
     }
 
     .circle {
-      opacity: 0.4;
-      transition: 0.4s;
+      @media (min-width: $sm) {
+        opacity: 0.4;
+        transition: 0.4s;
+      }
     }
   }
 }
