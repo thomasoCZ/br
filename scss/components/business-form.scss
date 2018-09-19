@@ -72,6 +72,16 @@
   */
 }
 
+.business-form__close svg rect {
+  transition: 0.4s;
+}
+
+.business-form__close:hover {
+  svg rect {
+    fill: $color1;
+  }
+}
+
 
 .business-form {
   position: fixed;
