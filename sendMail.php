@@ -23,7 +23,7 @@ try{
         'fromName' => 'Brive Studio',
         'apikey' => '9efda854-9401-4104-8360-bfc39c6e0882',
         'subject' => 'Kontakt z webu brivestudio',
-        'to' => 'radovanmail@gmail.com',
+        'to' => 'hello@brivestudio.com',
         'bodyHtml' => '<table>'.$table.'</table>',
         'bodyText' => 'Text Body',
         'isTransactional' => false);
