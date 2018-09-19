@@ -1,7 +1,7 @@
 {
  "name": "Brive Studio",
- "theme_color": "#1d1d1d",
- "background_color": "#2196f3",
+ "theme_color": "#ffffff",
+ "background_color": "#1d1d1d",
  "display": "browser",
  "scope": "/",
  "start_url": "/",
