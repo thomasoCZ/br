@@ -86,7 +86,7 @@ class FormContainer extends Component {
         let formEmail = new FormData();
         formEmail.append('formData', JSON.stringify( this.state ));
 
-        fetch("http://localhost/br/sendMail.php", {
+        fetch("https://brivestudio.com/sendMail.php", {
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
