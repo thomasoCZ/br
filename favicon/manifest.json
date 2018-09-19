@@ -1,5 +1,11 @@
 {
- "name": "App",
+ "name": "Brive Studio",
+ "theme_color": "#ffffff",
+ "background_color": "#1d1d1d",
+ "display": "browser",
+ "scope": "/",
+ "start_url": "/",
+
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
