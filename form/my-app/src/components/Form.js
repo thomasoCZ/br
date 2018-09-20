@@ -127,7 +127,7 @@ class Form extends Component {
                             </div>
                         </div>
                         <button type="submit" className="button--outline button">
-                            <span className="btn__text">Odeslat</span>
+                            <span className="btn__text">Send</span>
                         </button>
                     </div>
                     <div className={this.props.state.finalStep === true ? 'active' : 'hide'}>
