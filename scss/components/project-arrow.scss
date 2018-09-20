@@ -1,21 +1,57 @@
-.svg-arrow {
-  cursor: pointer;
-  position: absolute;
-  z-index: 10;
-  transform: translate3d(0, -50%, 0) scale3D(0,0,1);
+.project-arrow {
+ position: absolute;
   top: 50%;
   right: 3rem;
+  z-index: 10;
+  transform: translate3d(0, -50%, 0);
+  font-size: 0;
+  display: none;
+  
+  @media (min-width: $md) {
+    display: block;
+  }
+
+  &:after {
+    content: 'Visit site';
+    position: absolute;
+    pointer-events: none;
+    font-size: 1rem;
+    font-weight: 500;
+    right: 120%;
+    top: 50%;
+    width: 4rem;
+    text-align: right;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    color: #fff;
+    transform: translate3D(-30%,-40%,0);
+    opacity: 0;
+    will-change: transform;
+    transition: 1.2s cubic-bezier(0.56, 0.24, 0.17, 0.96);
+    display: none;
+
+    @media (min-width: 1025px) {
+      display: block;
+    }
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: translate3D(0,-40%,0);
+  }
+
+}
+
+.svg-arrow {
+  cursor: pointer;
+  transform: scale3D(0,0,1);
   width: 111px;
   height: 111px;
   border-radius: 100%;
   overflow: visible;
   will-change: transform;
   transition: box-shadow 1s ease-out, transform 0.4s ease-out;
-  display: none;
-  
-  @media (min-width: $sm) {
-    display: block;
-  }
+
   
   &:hover {
     //box-shadow: 0 0 60px 0 rgba(#fff, 0.6);
@@ -92,6 +128,6 @@
 }
 
 .active .svg-arrow {
-  transform: translate3d(0, -50%, 0) scale3D(1,1,1);
+  transform: scale3D(1,1,1);
   transition: box-shadow 1s ease-out, transform 2s cubic-bezier(0.56, 0.24, 0.17, 0.96) 1.45s;
 }
