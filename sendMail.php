@@ -5,42 +5,54 @@
  * Date: 15/06/2018
  * Time: 17:55
  */
-
 header('Access-Control-Allow-Origin: *');
- $table = '';
+
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+$table = '';
+
+
+
 // data pro odeslani
-if(isset($_POST['formData'])){
+if (isset($_POST['data'])) {
+    echo 'Message has been sent';
 
-
-    foreach(json_decode($_POST['formData']) as $key=>$value ){
-           $table.= '<tr><td>'.$key.'</td><td>'.$value.'</td></tr>';
+    foreach (json_decode($_POST['data']) as $key => $value) {
+        $table .= '<tr><td>' . $key . '</td><td>' . $value . '</td></tr>';
     }
-}
 
-$url = 'https://api.elasticemail.com/v2/email/send';
-try{
-    $post = array('from' => 'radek@brivestudio.com',
-        'fromName' => 'Brive Studio',
-        'apikey' => '9efda854-9401-4104-8360-bfc39c6e0882',
-        'subject' => 'Kontakt z webu brivestudio',
-        'to' => 'hello@brivestudio.com',
-        'bodyHtml' => '<table>'.$table.'</table>',
-        'bodyText' => 'Text Body',
-        'isTransactional' => false);
-    $ch = curl_init();
-    curl_setopt_array($ch, array(
-        CURLOPT_URL => $url,
-        CURLOPT_POST => true,
-        CURLOPT_POSTFIELDS => $post,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HEADER => false,
-        CURLOPT_SSL_VERIFYPEER => false
-    ));
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+    try {
+        //Server settings
+        $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp-180270.m70.wedos.net';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'radek@brivestudio.com';                 // SMTP username
+        $mail->Password = 'Skakalpespresoves82@';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
 
-    $result=curl_exec ($ch);
-    curl_close ($ch);
-    echo $result;
-}
-catch(Exception $ex){
-    echo $ex->getMessage();
+        //Recipients
+        $mail->setFrom('radek@brivestudio.com', 'Mailer');
+        $mail->addAddress('radek@brivestudio.com');     // Add a recipient
+        $mail->addReplyTo('radek@brivestudio.com', 'Information');
+
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Here is the subject';
+        $mail->Body = '<table>' . $table . '</table>';
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    }
+
 }

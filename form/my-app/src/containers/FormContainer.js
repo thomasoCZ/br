@@ -84,12 +84,12 @@ class FormContainer extends Component {
         event.preventDefault();
 
         let formEmail = new FormData();
-        formEmail.append('formData', JSON.stringify( this.state ));
+        formEmail.append('data', JSON.stringify( this.state ));
 
         fetch("https://brivestudio.com/sendMail.php", {
             method: 'post',
             headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                'Accept': 'application/json, application/xml, text/plain, text/html, *.*'
             },
             body: formEmail
         }).then(function (data) {
