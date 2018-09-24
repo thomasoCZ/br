@@ -96,7 +96,10 @@ h6 {
 
 
 
-
+.section:not(.active) .split-text.active .split-line span {
+	transform: translateY(120%);
+	transition: transform 1.4s cubic-bezier(0.38, 0.01, 0.2, 1) 0.7s, opacity 0.4s;
+}
 
 .split-line {
 	overflow: hidden;
@@ -143,7 +146,6 @@ h6 {
 		  will-change: transform;
 	  }
 }
-
 
 
 
