@@ -102,10 +102,10 @@
   visibility: hidden;
   overflow: auto;
   will-change: transform;
-  transform: scale3D(0.8,0.8,1);
+  //transform: scale3D(0.8,0.8,1);
   pointer-events: none;
   transform-origin: 50% 50%;
-  transition: 0.3s ease;
+  transition: 1s cubic-bezier(0.63, 0.13, 0, 0.95);
 
   @media (min-width: $md) {
     align-items: center;
@@ -117,7 +117,6 @@
     visibility: visible;
     transform: scale3D(1,1,1);
     pointer-events: all;
-    transition: 0.4s ease;
     
   }
 

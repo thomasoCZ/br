@@ -8,7 +8,7 @@ class Form extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <div
                         className={this.props.state.secondStep === false && this.props.state.finalStep === false ? 'active' : 'hide'}>
-                        <h2>What do you need from us?</h2>
+                        <h2>What are you looking for?</h2>
                         <div className="checkboxGrid">
                             <div className="checkbox">
                                 <label>
@@ -19,7 +19,7 @@ class Form extends Component {
 
                                     />
                                     <span className="square"></span>
-                                    Website development
+                                    Custom website development
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -40,7 +40,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Shop/Ecommerce solution
+                                    Shop / Ecommerce solution
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -50,7 +50,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    UX / Design / Marketing Consulting
+                                    Design / Marketing Consultation
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -60,7 +60,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Web App
+                                    Web application
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -70,7 +70,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Other
+                                    Something else
                                 </label>
                             </div>
 

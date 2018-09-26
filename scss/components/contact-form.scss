@@ -119,6 +119,11 @@
     //background: #1d2529;
     margin: 5px;
     outline: 0;
+
+
+    @media (min-width: $lg) {
+      padding-left: 3rem;
+    }
     
     label input[type=radio],
     label input[type=checkbox] {

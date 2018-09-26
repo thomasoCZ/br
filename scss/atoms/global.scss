@@ -240,14 +240,19 @@ h6 {
 	margin: 0;
 	padding: 0;
 	display: none;
+	pointer-events: none;
 
-	@media (min-width: $sm) {
+	@media (min-width: $md) {
 		display: block;
+	}
+
+	@media (min-width: $lg) {
+		pointer-events: all;
 	}
 
 	li {
 
-		a {
+		span {
 			font-family: $font-heading;
 			color: #000;
 			font-weight: 500;
@@ -257,10 +262,10 @@ h6 {
 			position: relative;
 			width: 10rem;
 			height: 0.6rem;
+			cursor: pointer;
 
-			&:hover:after {
-				transform: translate3D(-50%,-50%,0);
-				transition: 0s;
+			&:hover:before {
+				background-color: #000;
 			}
 
 
@@ -271,17 +276,21 @@ h6 {
 				top: 50%;
 				transform: translate3D(0,-50%,0);
 				display: block;
-				background-color: #dedede;
+				background-color: rgba(#000,0.2);
 				height: 2px;
 				width: 10px;
 				will-change: width;
+			}
+
+			&:before {
+				transition: 0s;
 			}
 
 			&:after {
 				width: 30px;
 				background-color: #000;
 				transform: translate3D(-110%,-50%,0);
-				transition: 0.7s cubic-bezier(0.42, 0, 0, 0.99);
+				transition: 0.8s cubic-bezier(0.42, 0, 0, 0.99);
 			}
 
 		}
@@ -290,7 +299,7 @@ h6 {
 	}
 
 	li.active {
-		a {
+		span {
 			&:after {
 				transform: translate3D(0,-50%,0);
 				transition: 0.7s cubic-bezier(0.42, 0, 0, 0.99);
