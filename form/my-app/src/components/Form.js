@@ -8,7 +8,7 @@ class Form extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <div
                         className={this.props.state.secondStep === false && this.props.state.finalStep === false ? 'active' : 'hide'}>
-                        <h2>What do you need from us ?</h2>
+                        <h2>What do you need from us?</h2>
                         <div className="checkboxGrid">
                             <div className="checkbox">
                                 <label>

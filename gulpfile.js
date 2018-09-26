@@ -25,7 +25,7 @@ function swallowError (error) {
 gulp.task('sass', function() {
 
 	var processors = [
-	autoprefixer({browsers: ['last 4 versions']}),
+	autoprefixer({browsers: ['last 8 versions']}),
 	cssnano(),
 	];
 

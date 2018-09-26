@@ -71,8 +71,10 @@ $(document).ready(function() {
   // desktop fullpage init
 
   $('#fullpage').fullpage({
-    scrollingSpeed: 700,
-    //menu: '.fullpage-menu',
+    scrollingSpeed: 1000,
+    menu: '#home-menu',
+    //lockAnchors: true,
+    anchors: ['home', 'dumbbell-fit', 'ixion', 'phc', 'stoica','contact'],
     afterLoad: function(anchorLink, index){
       var loadedSection = $(this);
        //console.log("Trigger section" + index + " animation!");
