@@ -71,20 +71,26 @@ $(document).ready(function() {
   // desktop fullpage init
 
   $('#fullpage').fullpage({
-    scrollingSpeed: 700,
-    //menu: '.fullpage-menu',
+    scrollingSpeed: 1000,
+    menu: '#home-menu',
+    lockAnchors: true,
+    anchors: ['home', 'dumbbell-fit', 'ixion', 'phc', 'stoica','contact'],
     afterLoad: function(anchorLink, index){
       var loadedSection = $(this);
        //console.log("Trigger section" + index + " animation!");
    }
   });
 
+  // fullpage navigation
 
-  // home feature click
+  $('.fp-link').click(function(){
 
-  $('.home-featured').click(function(){
-    $.fn.fullpage.moveTo(2, 0);
+    var targetSlide = $(this).data('menuanchor');
+
+    $.fn.fullpage.moveTo(targetSlide);
+
   });
+
   
 
   // logo loader in 
@@ -112,6 +118,9 @@ $(document).ready(function() {
     $('.language-menu a').removeClass('active');
     $(this).addClass('active');
   });
+
+
+
 
 
   // hp tilt effect
