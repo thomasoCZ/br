@@ -41,12 +41,12 @@ if (isset($_POST['data'])) {
 
         //Recipients
         $mail->setFrom('radek@brivestudio.com', 'Mailer');
-        $mail->addAddress('radek@brivestudio.com');     // Add a recipient
-        $mail->addReplyTo('radek@brivestudio.com', 'Information');
+        $mail->addAddress('hello@brivestudio.com');     // Add a recipient
+        $mail->addReplyTo('hello@brivestudio.com', 'Information');
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'Here is the subject';
+        $mail->Subject = 'Contact form brivestudio.com';
         $mail->Body = '<table>' . $table . '</table>';
 
         $mail->send();
