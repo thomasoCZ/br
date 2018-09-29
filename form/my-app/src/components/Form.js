@@ -82,7 +82,7 @@ class Form extends Component {
 
                         </div>
                         <button className="button--outline button" onClick={this.props.nextStepChange}>
-                            <span className="btn__text">Continue</span>
+                            <span className="btn__text">Pokračovat</span>
                         </button>
                     </div>
                     <div className={this.props.state.secondStep === true ? 'active' : 'hide'}>
