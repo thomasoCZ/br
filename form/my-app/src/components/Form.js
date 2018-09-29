@@ -8,7 +8,7 @@ class Form extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <div
                         className={this.props.state.secondStep === false && this.props.state.finalStep === false ? 'active' : 'hide'}>
-                        <h2>What are you looking for?</h2>
+                        <h2>S čím Vám můžeme pomoci</h2>
                         <div className="checkboxGrid">
                             <div className="checkbox">
                                 <label>
@@ -19,7 +19,7 @@ class Form extends Component {
 
                                     />
                                     <span className="square"></span>
-                                    Custom website development
+                                    Vývoj a správa webových stránek
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -30,7 +30,7 @@ class Form extends Component {
 
                                     />
                                     <span className="square"></span>
-                                    Animation / Video
+                                    Animace / Video
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -40,7 +40,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Shop / Ecommerce solution
+                                    Eshop / Prodej a platby přes internet
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -50,7 +50,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Design / Marketing Consultation
+                                    Design / Marketing
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -60,7 +60,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Web application
+                                    Webové aplikace
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -70,13 +70,13 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Something else
+                                    Něco jiného
                                 </label>
                             </div>
 
                             {this.props.state.isValid === false &&
                             <div className="isNotValid">
-                                Please select one or more options
+                                Prosím vyberte alespoň jednu službu
                             </div>
                             }
 
@@ -86,7 +86,7 @@ class Form extends Component {
                         </button>
                     </div>
                     <div className={this.props.state.secondStep === true ? 'active' : 'hide'}>
-                        <h2>Leave us a message</h2>
+                        <h2>Váš kontakt a zpráva</h2>
                         <div className="formGrid">
 
                             <div className="has-float-label">
@@ -98,7 +98,7 @@ class Form extends Component {
                                        id="name"
                                        placeholder="Your Name"
                                 />
-                                <label htmlFor="name">Full Name:</label>
+                                <label htmlFor="name">Vaše jméno:</label>
                             </div>
                             <div className="has-float-label">
                                 <input type="email"
@@ -109,7 +109,7 @@ class Form extends Component {
                                        id="address"
                                        placeholder="Your Email"
                                 />
-                                <label htmlFor="address">Emal Address:</label>
+                                <label htmlFor="address">Váš email:</label>
 
                             </div>
                             <div className="has-float-label">
@@ -123,16 +123,16 @@ class Form extends Component {
                                     required="required"
                                     id="message"
                                 />
-                                <label className="form-label" htmlFor="message">Message</label>
+                                <label className="form-label" htmlFor="message">Doplnění Vašeho požadavku</label>
                             </div>
                         </div>
                         <button type="submit" className="button--outline button">
-                            <span className="btn__text">Send</span>
+                            <span className="btn__text">Odeslat</span>
                         </button>
                     </div>
                     <div className={this.props.state.finalStep === true ? 'active' : 'hide'}>
-                        <h3>Thank you for your message.<br />
-                            We will get back to you soon.
+                        <h3>Děkujeme za Vaši zprávu.<br />
+                            Ozveme se Vám co nejdříve na Vámi uvedený kontakt {this.props.state.address}.
                         </h3>
                     </div>
                 </form>
