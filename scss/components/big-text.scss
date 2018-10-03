@@ -7,11 +7,11 @@
   letter-spacing: -1rem;
   white-space: nowrap;
   position: absolute;
-  bottom: -3%;
-  left: -3%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
   z-index: 99;
   transform-origin: 50% 50%;
-  transform: translate3D(-30%, -10%, 0)  rotate(-90deg);
   will-change: transform;
   transition: 1s ease-out;
   pointer-events: none;
@@ -19,8 +19,8 @@
 
   @media (min-width: $md) {
     display: block;
-    opacity: 0;
-    display: none;
+    //opacity: 0;
+    //display: none;
   }
 
   &--bottom {

@@ -86,7 +86,7 @@ class Form extends Component {
                         </button>
                     </div>
                     <div className={this.props.state.secondStep === true ? 'active' : 'hide'}>
-                        <h2>Váš kontakt a zpráva</h2>
+                        <h2>Napište nám</h2>
                         <div className="formGrid">
 
                             <div className="has-float-label">
@@ -96,7 +96,7 @@ class Form extends Component {
                                        onChange={this.props.handleInputChange}
                                        required="required"
                                        id="name"
-                                       placeholder="Your Name"
+                                       placeholder="Jméno"
                                 />
                                 <label htmlFor="name">Vaše jméno:</label>
                             </div>
@@ -107,7 +107,7 @@ class Form extends Component {
                                        onChange={this.props.handleInputChange}
                                        required="required"
                                        id="address"
-                                       placeholder="Your Email"
+                                       placeholder="Email"
                                 />
                                 <label htmlFor="address">Váš email:</label>
 
@@ -119,7 +119,7 @@ class Form extends Component {
                                     rows="5"
                                     value={this.props.state.message}
                                     onChange={this.props.handleInputChange}
-                                    placeholder="Message"
+                                    placeholder="Zpráva"
                                     required="required"
                                     id="message"
                                 />
@@ -132,7 +132,7 @@ class Form extends Component {
                     </div>
                     <div className={this.props.state.finalStep === true ? 'active' : 'hide'}>
                         <h3>Děkujeme za Vaši zprávu.<br />
-                            Ozveme se Vám co nejdříve na Vámi uvedený kontakt {this.props.state.address}.
+                            Ozveme se Vám co nejdříve na {this.props.state.address}.
                         </h3>
                     </div>
                 </form>
