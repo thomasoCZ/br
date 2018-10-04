@@ -1,46 +1,49 @@
 .language-menu {
-    position: fixed;
-    top: 2.4rem;
-    right: 2.4rem;
-    z-index: 50;
-    @extend .heading-caps;
+    position: absolute;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
-    
+    top: 0.6rem;
+    right: 3.3rem;
+    z-index: 40;
     display: none;
+
+    @media (min-width: $md) {
+
+    }
+
+    @media (min-width: $md) {
+      display: block;
+      top: auto;
+      right: auto;
+      bottom: 0.8rem;
+      left: 0.8rem;
+    }
+
 
     &:hover a {
         transform: translateX(0);
     }
+    
 
-    a {
+    span, a {
+        font-family: $font-heading;
+        text-transform: uppercase;
         text-decoration: none;
         display: block;
-        line-height: 2;
         font-weight: 500;
-        transition: color 0.8s, transform 0.2s cubic-bezier(0.47, 0.15, 0.18, 0.87);
-        color: rgba(#fff, 0.4);
-        transform: translateX(100%);
-
-        &:hover {
-            
-        }
-    }
-    a.active {
-        order: -1;
-        cursor: auto;
+        margin-right: 0.4rem;
         color: #fff;
-        transform: translateX(0);
-    }
-}
+        pointer-event: all;
+        transition: 0.4s;
+        padding: 1rem;
 
-.fp-viewing-contact {
-    .language-menu a {
-        color: rgba(#000, 0.4);
+        @media (min-width: $md) {
+            color: rgba(#000,0.2);
 
-        &.active {
-            color: #000;
+            &:hover {
+                color: #000;
+            }
         }
+
     }
 }

@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 
 
-  $('.home-logos__item').click(function(){
+  $('.home-text-changer').click(function(){
 
     var thisTarget = $(this).data('target');
     

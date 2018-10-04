@@ -23,7 +23,7 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#000000"> 
-  <title>BRIVE - Digital Studio Prague | Webdesign | Wordpress | Animation | Ecommerce | Branding</title>
+  <title>BRIVE™ - Digital Studio Prague | Webdesign | Wordpress | Animation | Ecommerce | Branding</title>
   <meta name="description" content="We are design-driven digital studio based in Prague building custom wordpress websites, ecommerce solutions, progressive web apps, video, animation and more."/>
   <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -114,10 +114,15 @@
     <li data-menuanchor="contact" class="fp-link"><span></span></li>
   </ul>
 
+
+  <div class="language-menu">
+    <a title="Czech verison" href="https://www.brive.cz">CZ</a>
+  </div>
+
   <div class="site-main">
 
 
-    <div class="logo fp-link" data-menuanchor="home">
+    <div class="logo home-text-changer fp-link" data-target="intro" data-menuanchor="home">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 634.3 257.4"
         style="enable-background:new 0 0 634.3 257.4;" xml:space="preserve">
         <path d="M134.2,58.5v22.4c0,24-9.1,39.5-27.2,46.3c19.7,6.6,29.5,22.5,29.5,47.8v23.9c0,19-5.2,33.5-15.7,43.5s-25.9,15-46.3,15H0V0
@@ -194,18 +199,18 @@
               
               <div class="home-logos__grid">
 
-                <div class="home-logos__item" data-target="wp">
-                  <img title="Custom Wordpress development" src="images/logos/wp-logo.svg" alt="">
+                <div class="home-logos__item home-text-changer" data-target="wp">
+                  <img title="Wordpress" src="images/logos/wp-logo.svg" alt="">
                 </div>
-                <div class="home-logos__item" data-target="woo">
-                  <img title="Woocomerce integration" src="images/logos/woo-logo.svg" alt="">
+                <div class="home-logos__item home-text-changer" data-target="woo">
+                  <img title="Woocomerce" src="images/logos/woo-logo.svg" alt="">
                 </div>
-                <div class="home-logos__item" data-target="pwa">
-                    <img title="We are developing with React JS" src="images/logos/pwa-logo.svg" alt="">
+                <div class="home-logos__item home-text-changer" data-target="pwa">
+                    <img title="Progressive Web Apps" src="images/logos/pwa-logo.svg" alt="">
                 </div>
 
-                <div class="home-logos__item" data-target="react">
-                    <img title="We are developing with React JS" src="images/logos/react-logo.svg" alt="">
+                <div class="home-logos__item home-text-changer" data-target="react">
+                    <img title="React JS" src="images/logos/react-logo.svg" alt="">
                 </div>
 
               </div>
@@ -516,8 +521,17 @@
 
             <div class="contact-details"> 
                 <div class="contact-details__grid"> 
-                  <a class="contact-details__email" href="mailto: hello@brivestudio.com">hello@brivestudio.com</a>
-                  <a href="tel:+420602566347" class="contact-details__phone">+420 602 566 347</a>
+                  <div>
+
+                    
+                    <a class="contact-details__email" href="mailto: hello@brivestudio.com">hello@brivestudio.com</a>
+                    <span>Email</span>
+                  </div>
+                  <div>
+                    
+                    <a href="tel:+420602566347" class="contact-details__phone">+420 602 566 347</a>
+                    <span>Phone</span>
+                  </div>
                 </div>
             </div>
            
@@ -535,17 +549,7 @@
 
 
   </div>
-
-
-
-  <script src="js/vendors/jquery.min.js"></script>
-  <script src="js/vendors/jquery.fullpage.min.js"></script>
-  <script src="js/vendors/jquery.splitlines.js"></script>
-
-  <script src="js/script.min.js"></script>
-  <script src="js/form.js"></script>
-
-
+  <script src="js/all.min.js"></script>
 </body>
 
 </html>
