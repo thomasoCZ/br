@@ -30,7 +30,7 @@ class Form extends Component {
 
                                     />
                                     <span className="square"></span>
-                                    Animation / Video
+                                    Design / Animation / Video
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -50,7 +50,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Design / Marketing Consultation
+                                    Consultation
                                 </label>
                             </div>
                             <div className="checkbox">
