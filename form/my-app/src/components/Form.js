@@ -40,7 +40,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Eshop / Prodej a platby přes internet
+                                    Eshop / Prodej a platby
                                 </label>
                             </div>
                             <div className="checkbox">
