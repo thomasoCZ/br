@@ -12,14 +12,14 @@
   }
 
   &:after {
-    content: 'Visit site';
+    content: 'Zobrazit web';
     position: absolute;
     pointer-events: none;
     font-size: 1rem;
     font-weight: 500;
     right: 120%;
     top: 50%;
-    width: 4rem;
+    width: 6rem;
     text-align: right;
     font-family: $font-heading;
     text-transform: uppercase;

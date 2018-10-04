@@ -32,21 +32,21 @@ gulp.task('sass', function() {
 	return gulp.src('scss/style.scss')
 	//.pipe(sourcemaps.init())
 	.pipe(sass())
-	.on('error', swallowError) 
+	.on('error', swallowError)
 	.pipe(postcss(processors))
 	//.pipe(sourcemaps.write())
-	.on('error', swallowError) 
+	.on('error', swallowError)
 	.pipe(gulp.dest(''));
 
 });
 
 gulp.task('sass-watch',['sass'], browserSync.reload);
 
-
 gulp.task('scripts', function() {  
-    return gulp.src('js/script.js')
-    	.pipe(uglify())
-        .pipe(rename('script.min.js'))
+	return gulp.src(['js/vendors/jquery.min.js','js/vendors/jquery.fullpage.min.js','js/vendors/jquery.splitlines.js','js/script.js','js/form.js'])
+		.pipe(concat('all.js'))
+		.pipe(uglify())
+        .pipe(rename('all.min.js'))
         .pipe(gulp.dest('js'));
 });
 

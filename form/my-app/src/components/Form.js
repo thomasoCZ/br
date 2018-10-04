@@ -8,7 +8,7 @@ class Form extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <div
                         className={this.props.state.secondStep === false && this.props.state.finalStep === false ? 'active' : 'hide'}>
-                        <h2>S čím Vám můžeme pomoci</h2>
+                        <h2>S čím Vám můžeme pomoci?</h2>
                         <div className="checkboxGrid">
                             <div className="checkbox">
                                 <label>
@@ -30,7 +30,7 @@ class Form extends Component {
 
                                     />
                                     <span className="square"></span>
-                                    Animace / Video
+                                    Design / Animace / Video
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -50,7 +50,7 @@ class Form extends Component {
                                            onChange={this.props.handleInputChange}
                                     />
                                     <span className="square"></span>
-                                    Design / Marketing
+                                    Konzultace
                                 </label>
                             </div>
                             <div className="checkbox">
@@ -76,7 +76,7 @@ class Form extends Component {
 
                             {this.props.state.isValid === false &&
                             <div className="isNotValid">
-                                Prosím vyberte alespoň jednu službu
+                                Prosím vyberte alespoň jednu položku 
                             </div>
                             }
 
@@ -132,7 +132,7 @@ class Form extends Component {
                     </div>
                     <div className={this.props.state.finalStep === true ? 'active' : 'hide'}>
                         <h3>Děkujeme za Vaši zprávu.<br />
-                            Ozveme se Vám co nejdříve na {this.props.state.address}.
+                            Ozveme se Vám co nejdříve na {this.props.state.address}
                         </h3>
                     </div>
                 </form>
