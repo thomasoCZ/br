@@ -12,14 +12,14 @@
   }
 
   &:after {
-    content: 'Přejít na web';
+    content: 'Visit site';
     position: absolute;
     pointer-events: none;
     font-size: 1rem;
     font-weight: 500;
     right: 120%;
     top: 50%;
-    width: 6rem;
+    width: 4rem;
     text-align: right;
     font-family: $font-heading;
     text-transform: uppercase;
