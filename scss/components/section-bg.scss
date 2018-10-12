@@ -53,6 +53,7 @@
 .section--work .section-bg {
   transform: scale3D(1.4,1.4,1) rotate(15deg) translateY(-24%);
   height: 50%;
+  //background: radial-gradient(circle at 20% 80%, #23283B, #000000);
 
   @media (min-width: $md) {
     height: 100%;
@@ -77,16 +78,18 @@
 
 
 // work background gradients
-.section--dumbbell .section-bg {
-  background: radial-gradient(circle at 20% 80%, #fa653f, #ab1957);
-}
 
 .section--ixion .section-bg {
   background: radial-gradient(circle at 20% 80%, #1f82e6, #082754);
 }
 
+.section--eh .section-bg {
+  background: radial-gradient(circle at 20% 80%, #353d58, #000000);
+}
+
+
 .section--phc .section-bg {
-  background: radial-gradient(circle at 20% 80%, #99da26, #2e812b);
+  background: radial-gradient(circle at 20% 80%, #ff620d, #a8164d);
 }
 
 .section--stoica .section-bg {
